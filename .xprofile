@@ -1,0 +1,37 @@
+# Env vars
+export PATH=$HOME/.local/bin:$PATH
+export _JAVA_AWT_WM_NONREPARENTING=1
+export QT_STYLE_OVERRIDE=kvantum 
+
+# Screens
+hdmi=`xrandr | grep ' connected' | grep 'HDMI' | awk '{print $1}'`
+
+if [ "$hdmi" = "HDMI-1" ]; then
+  xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 1920x0 --rotate normal
+else
+  xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off --output DP-1 --off &
+fi
+
+# Keyboard Layout
+setxkbmap es &
+
+# Wireless Mouse or Touchpad
+~/.config/scripts/mouse.sh &
+
+# Zsh config dir
+export ZDOTDIR=$HOME/.config/zsh
+
+# Bluetooth
+# blueman-applet &
+
+# Screenshots
+flameshot &
+
+# Dropbox
+dropbox &
+
+# Night Light
+redshift -l -8.3960000:43.3713500 &
+
+# Hide the cursor
+xbanish &
