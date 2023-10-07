@@ -14,7 +14,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-export PATH="$HOME/.cargo/bin/:$PATH"
+export PATH="$HOME/.cargo/bin/:$HOME/.config/scripts:$PATH"
 export JAVA_HOME=/opt/jdk
 export PATH=$JAVA_HOME/bin:$PATH
 
@@ -40,7 +40,7 @@ alias yR='yay -R'
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/git-bare/dotfiles/ --work-tree=$HOME/.config'
 alias FIC='/usr/bin/git --git-dir=$HOME/git-bare/FIC --work-tree=$HOME/Dropbox/Obsidian/FIC'
-
+# alias dotfiles-add='dotfiles add alacritty dun'
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-shift-select/zsh-shift-select.plugin.zsh
