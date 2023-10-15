@@ -15,7 +15,7 @@ brightnessUp = "XF86MonBrightnessUp"
 # DEFAULT APPS
 
 editor = "code"
-browser = "firefox"
+browser = "brave"
 terminal = "alacritty"
 file_manager = "thunar"
 notes = "obsidian"

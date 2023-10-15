@@ -4,27 +4,44 @@ from .colors import colors
 
 layouts = [
     layout.MonadTall(margin=12, 
-                     border_focus = colors["magenta"],
-                     border_normal=colors["dark-grey"]),
-    #layout.Columns(border_focus_stack='#d75f5f'),
+                    border_focus = colors["magenta"],
+                    border_normal=colors["dark-grey"]),
     layout.Max(
-        margin = 10
+        margin = 8
     ),
-    # Try more layouts by unleashing below layouts.
-    # layout.Stack(num_stacks=2),
-    # layout.Bsp(),
-    # layout.Matrix(),
-    # layout.MonadTall(),
-    # layout.MonadWide(),
-    # layout.RatioTile(),
-    # layout.Tile(),
-    # layout.TreeTab(),
-    # layout.VerticalTile(),
-    # layout.Zoomy(),
+    layout.MonadWide(margin=12, 
+                    border_focus = colors["magenta"],
+                    border_normal=colors["dark-grey"]),
+    layout.Matrix(margin=12, 
+                    border_focus = colors["magenta"],
+                    border_normal=colors["dark-grey"]),
+                    
+    # layout.Stack(num_stacks=2,
+    #             margin=12, 
+    #             border_focus = colors["magenta"],
+    #             border_normal=colors["dark-grey"]),
+    # layout.Bsp(margin=12, 
+    #             border_focus = colors["magenta"],
+    #             border_normal=colors["dark-grey"]),
+    # layout.Tile(margin=12, 
+    #             border_focus = colors["magenta"],
+    #             border_normal=colors["dark-grey"]),
+    # layout.RatioTile(margin=12, 
+    #                 border_focus = colors["magenta"],
+    #                 border_normal=colors["dark-grey"]),
+    # layout.TreeTab(margin=12, 
+    #                 border_focus = colors["magenta"],
+    #                 border_normal=colors["dark-grey"]),
+    # layout.VerticalTile(margin=12,
+    #                 border_focus = colors["magenta"],
+    #                 border_normal=colors["dark-grey"]),
+    # layout.Zoomy(margin=12, 
+    #             border_focus = colors["magenta"],
+    #             border_normal=colors["dark-grey"]),
 ]
 
 floating_layout = layout.Floating(
-    border_focus = colors["yellow"],
+    border_focus = colors["cyan"],
     border_normal=colors["dark-grey"],
     float_rules=[
     # Run the utility of `xprop` to see the wm class and name of an X client.
