@@ -19,6 +19,7 @@ browser = "brave"
 terminal = "alacritty"
 file_manager = "thunar"
 notes = "obsidian"
+browser2 = "google-chrome-stable"
 
 rofi = "/home/ranicocs/.config/rofi/types/type-7/launcher.sh"
 rofi_windows = "/home/ranicocs/.config/rofi/types/type-7/window.sh"
@@ -40,5 +41,5 @@ group_apps = {
     "6": rofi,
     "7": "steam",
     "8": "spotify",
-    "9": "google-chrome-stable",
+    "9":browser2
 }

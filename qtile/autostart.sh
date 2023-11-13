@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Screens
+screens &
+
 # Wallpaper
 feh --bg-scale Wallpapers/RoW01.jpg & disown
 

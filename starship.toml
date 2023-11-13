@@ -10,6 +10,7 @@ $git_metrics\
 $fill\
 $nodejs\
 $c\
+$rust\
 $cmd_duration\
 $line_break\
 $character"""

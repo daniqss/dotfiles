@@ -13,6 +13,7 @@ colors:
     bright_foreground: '#e6efff'
     foreground: '#abb2bf'
 cursor:
+  cursor: '#58c0fa'
   blink_interval: 750
   style: Beam
   thickness: 0.2

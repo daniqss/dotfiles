@@ -143,22 +143,22 @@ screen1_bar = bar.Bar(
             length = 8,
             **rounded_powerlineRight,
         ),
-        # widget.Battery(
-        #     format = '󰁹 {percent:2.0%}',
+        # widget.PulseVolume(
+        #     fmt="󰕾 {}",
         #     foreground=colors["dark"],
         #     background=colors["yellow"],
         #     padding=10,
         #     font="FiraCode Nerd Font Mono",
-        #     **rounded_powerlineLeft,
+        #     mouse_callbacks = {"Button3": lazy.spawn("pavucontrol")},
         # ),
-        widget.PulseVolume(
-            fmt="󰕾 {}",
-            foreground=colors["dark"],
-            background=colors["yellow"],
-            padding=10,
-            font="FiraCode Nerd Font Mono",
-            mouse_callbacks = {"Button3": lazy.spawn("pavucontrol")},
-        ),
+        # widget.PulseVolumeExtra(
+        #     fmt="󰕾 {}",
+        #     foreground=colors["dark"],
+        #     background=colors["yellow"],
+        #     padding=10,
+        #     font="FiraCode Nerd Font Mono",
+        #     mouse_callbacks = {"Button3": lazy.spawn("pavucontrol")},
+        # ),
         widget.TextBox(
             text = "|",
             foreground=colors["dark"],
