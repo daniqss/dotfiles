@@ -50,7 +50,7 @@
 * `~/.config/alacritty/alacritty.yml`
 
 ### Shell
-* [**Zsh**](zsh.org) 
+* [**Zsh**](https://zsh.org) 
 * `~/.config/zsh/.zshrc`
 - **Plugins**
 	- [Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
