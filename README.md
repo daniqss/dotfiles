@@ -6,9 +6,9 @@
 - **OS**: [EndeavourOS Qtile](https://discovery.endeavouros.com/window-tiling-managers/qtile/)
 - **Window Manager:** [Qtile](#Qtile)
 - **Launcher:** [Rofi](#Rofi)
-- **Compositor:** [Picom Jonaburg](https://github.com/jonaburg/picom
+- **Compositor:** [Picom Jonaburg](https://github.com/jonaburg/picom)
 - **Terminal:** [Alacritty](#Terminal)
-- **Lockscreen:** betterlockscreen
+- **Lockscreen:** [betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)
 - **File Manager:** thunar
 - **GTK Theme**: [yaru-magenta-dark](https://aur.archlinux.org/packages/yaru-gtk-theme)
 - **Notifications**: [dunst](https://github.com/dunst-project/dunst)
@@ -50,7 +50,7 @@
 * `~/.config/alacritty/alacritty.yml`
 
 ### Shell
-* [**Zsh**](zsh.org) 
+* [**Zsh**](https://zsh.org) 
 * `~/.config/zsh/.zshrc`
 - **Plugins**
 	- [Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
