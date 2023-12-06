@@ -12,20 +12,23 @@ mute = "XF86AudioMute"
 brightnessDown = "XF86MonBrightnessDown"
 brightnessUp = "XF86MonBrightnessUp"
 
-# DEFAULT APPS
-
-editor = "code"
-browser = "brave"
-terminal = "alacritty"
-file_manager = "thunar"
-notes = "obsidian"
-browser2 = "google-chrome-stable"
+# ROFI
 
 rofi = "/home/ranicocs/.config/rofi/types/type-7/launcher.sh"
 rofi_windows = "/home/ranicocs/.config/rofi/types/type-7/window.sh"
 rofi_power = "/home/ranicocs/.config/rofi/powermenu/type-5/powermenu.sh"
 rofi_emoji = "/home/ranicocs/.config/rofi/types/type-7/emoji.sh"
 rofi_battery = "/home/ranicocs/.config/rofi/applets/bin/battery.sh"
+
+# DEFAULT APPS
+
+editor = "code"
+browser = "brave"
+terminal = "alacritty"
+file_manager = "thunar"
+myscelaneous = rofi
+notes = "obsidian"
+browser2 = "google-chrome-stable"
 
 screenshot = "flameshot screen"
 screenshot_gui = "flameshot gui"

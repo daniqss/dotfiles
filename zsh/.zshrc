@@ -15,7 +15,7 @@ compinit
 # End of lines added by compinstall
 
 export PATH="$HOME/.cargo/bin/:$HOME/.config/scripts:$PATH"
-export JAVA_HOME=/opt/jdk
+export JAVA_HOME=/opt/jdk-20.0.2
 export PATH=$JAVA_HOME/bin:$PATH
 
 bindkey "^[[3~" delete-char
