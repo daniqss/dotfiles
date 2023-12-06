@@ -8,7 +8,7 @@
 - **Launcher:** [Rofi](#Rofi)
 - **Compositor:** [Picom Jonaburg](https://github.com/jonaburg/picom)
 - **Terminal:** [Alacritty](#Terminal)
-- **Lockscreen:** betterlockscreen
+- **Lockscreen:** [betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)
 - **File Manager:** thunar
 - **GTK Theme**: [yaru-magenta-dark](https://aur.archlinux.org/packages/yaru-gtk-theme)
 - **Notifications**: [dunst](https://github.com/dunst-project/dunst)
