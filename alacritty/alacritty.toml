@@ -1,0 +1,54 @@
+[colors.normal]
+  black = '#010101'
+  blue = '#4594d0'
+  cyan = '#58c0fa'
+  green = '#7aca5b'
+  magenta = '#d550a7'
+  red = '#ef596f'
+  white = '#fdfdfd'
+  yellow = '#e1d706'
+
+[colors.primary]
+  background = '#181a1f'
+  bright_foreground = '#e6efff'
+  foreground = '#abb2bf'
+
+[colors.cursor]
+  cursor = "#58c0fa"
+
+[cursor]
+  blink_interval = 750
+  style = 'Beam'
+  thickness = 0.2
+  unfocused_hollow = false
+
+[font]
+  size = 9
+
+[font.bold]
+  family = 'FiraCodeNerdFont'
+  style = 'Bold'
+
+[font.bold_italic]
+  family = 'FiraCodeNerdFont'
+  style = 'Bold Italic'
+
+
+[font.italic]
+  family = 'FiraCodeNerdFont'
+  style = 'italic'
+
+[font.normal]
+  family = 'Fira Code Nerd Font'
+  style = 'Regular'
+
+[font.offset]
+  x = 0
+  y = 0
+
+[window]
+  opacity = 0.8
+
+[window.padding]
+  x = 15
+  y = 5
