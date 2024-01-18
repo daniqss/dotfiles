@@ -6,7 +6,7 @@
 - **OS**: [EndeavourOS Qtile](https://discovery.endeavouros.com/window-tiling-managers/qtile/)
 - **Window Manager:** [Qtile](#Qtile)
 - **Launcher:** [Rofi](#Rofi)
-- **Compositor:** [Picom Jonaburg](https://github.com/jonaburg/picom
+- **Compositor:** [Picom Jonaburg](https://github.com/jonaburg/picom)
 - **Terminal:** [Alacritty](#Terminal)
 - **Lockscreen:** betterlockscreen
 - **File Manager:** thunar
