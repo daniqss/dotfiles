@@ -2,6 +2,7 @@ from libqtile import widget, bar
 from libqtile.lazy import lazy
 from qtile_extras import widget
 from qtile_extras.widget.decorations import PowerLineDecoration
+from .widgets import volume
 from .to_import import *
 from .colors import colors
 
@@ -96,6 +97,8 @@ screen1_bar = bar.Bar(
             background = colors["dark-grey"],
             foreground = colors["row"]["5"],
             opacity = 0-95,
+            mouse_callbacks = {"Button3": lazy.function(open_default_app)},
+
 
             **rounded_powerlineLeft,
         ),
@@ -159,6 +162,7 @@ screen1_bar = bar.Bar(
         #     font="FiraCode Nerd Font Mono",
         #     mouse_callbacks = {"Button3": lazy.spawn("pavucontrol")},
         # ),
+        volume,
         widget.TextBox(
             text = "|",
             foreground=colors["dark"],

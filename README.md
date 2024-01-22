@@ -23,7 +23,7 @@
 
 ### Default Apps
 
-* **Editor** -> VSCode
+- **Editor** -> VSCode
 - **Browser** -> Brave
 - **Terminal Emulator** -> Alacritty
 - **File Manager** -> Thunar

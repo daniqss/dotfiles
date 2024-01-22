@@ -1,7 +1,7 @@
 from libqtile.config import Key, Group
 from libqtile.command import lazy
 from .keys import keys
-from .to_import import mod, alt, group_apps
+from .to_import import mod, alt, group_apps, open_default_app
 
 groups = [
     Group("1", label = "󰨞"),
@@ -35,12 +35,6 @@ for i in groups:
             lazy.screen.prev_group(),
             desc="Switch to previous group"),
     ])
-
-    def open_default_app(qtile):
-        current_group = qtile.current_group.name
-        default_app = group_apps[current_group]
-        if default_app:
-            qtile.cmd_spawn(default_app)
 
     keys.extend([
         Key([mod], "p",

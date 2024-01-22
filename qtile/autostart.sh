@@ -1,10 +1,13 @@
 #!/bin/sh
 
-# Screens
-screens &
+# Screens & Wallpaper & keyboard layout
+# bash setup.sh &
 
-# Wallpaper
-feh --bg-scale Wallpapers/RoW01.jpg & disown
+# 
+# feh --bg-scale Wallpapers/RoW01.jpg & disown
+
+# Setup
+# bun ~/.config/scripts/setup.js
 
 # Composer
 picom & disown # --experimental-backends --vsync should prevent screen tearing on most setups if needed

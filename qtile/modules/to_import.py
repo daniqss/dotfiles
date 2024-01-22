@@ -24,7 +24,7 @@ rofi_battery = "/home/ranicocs/.config/rofi/applets/bin/battery.sh"
 
 editor = "code"
 browser = "brave"
-terminal = "alacritty"
+terminal = "kitty"
 file_manager = "thunar"
 myscelaneous = rofi
 notes = "obsidian"
@@ -46,3 +46,9 @@ group_apps = {
     "8": "spotify",
     "9":browser2
 }
+
+def open_default_app(qtile):
+    current_group = qtile.current_group.name
+    default_app = group_apps[current_group]
+    if default_app:
+        qtile.cmd_spawn(default_app)

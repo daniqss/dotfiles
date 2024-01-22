@@ -17,6 +17,8 @@ compinit
 export PATH="$HOME/.cargo/bin/:$HOME/.config/scripts:$PATH"
 export JAVA_HOME=/opt/jdk-20.0.2
 export PATH=$JAVA_HOME/bin:$PATH
+export WEZTERM_CONFIG_FILE="$HOME/.config/wezterm/wezterm.lua"
+
 
 bindkey "^[[3~" delete-char
 bindkey "^[[1;5C" forward-word
@@ -28,6 +30,7 @@ eval "$(starship init zsh)"
 eval $(thefuck --alias)
 
 alias ls='lsd --color=auto'
+alias la='lsd --color=auto -a'
 alias grep='grep --color=auto'
 alias cat='bat --style=plain --paging=never'
 alias cls='clear'
@@ -44,3 +47,8 @@ alias FIC='/usr/bin/git --git-dir=$HOME/git-bare/FIC --work-tree=$HOME/Dropbox/O
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-shift-select/zsh-shift-select.plugin.zsh
+
+# bun completions
+[ -s "/home/ranicocs/.bun/_bun" ] && source "/home/ranicocs/.bun/_bun"
+
+cat ~/todo.ml

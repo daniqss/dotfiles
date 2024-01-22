@@ -1,0 +1,31 @@
+# Ignora todo por defecto
+*
+
+# Añade las excepciones
+!.gitignore
+!kitty
+!qtile/
+!qtile/**
+!neofetch/
+!neofetch/**
+!rofi/
+!rofi/**
+!gtk-2.0/
+!gtk-2.0/**
+!gtk-3.0/
+!gtk-3.0/**
+!gtk-4.0/
+!gtk-4.0/**
+!alacritty/
+!alacritty/**
+!zsh/
+!zsh/**
+!picom.conf
+!starship.toml
+!.bashrc
+!.xprofile
+
+!Wallpapers/
+!Wallpapers/**
+!scripts/
+!scripts/**
