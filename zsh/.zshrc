@@ -25,12 +25,14 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey "\033[1~" beginning-of-line
 bindkey "\033[4~" end-of-line
+bindkey '^H' backward-kill-word
 
+eval "pokeget random --hide-name"
 eval "$(starship init zsh)"
-eval $(thefuck --alias)
 
 alias ls='lsd --color=auto'
 alias la='lsd --color=auto -a'
+alias ll='lsd --color=auto -l'
 alias grep='grep --color=auto'
 alias cat='bat --style=plain --paging=never'
 alias cls='clear'
@@ -50,5 +52,3 @@ source ~/.config/zsh/zsh-shift-select/zsh-shift-select.plugin.zsh
 
 # bun completions
 [ -s "/home/ranicocs/.bun/_bun" ] && source "/home/ranicocs/.bun/_bun"
-
-cat ~/todo.ml

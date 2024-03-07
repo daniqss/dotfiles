@@ -16,7 +16,7 @@ $line_break\
 $character"""
 
 [username]
-format = "[╭─](bold blue)[in]($style) "
+format = "(bold blue)[in]($style) "
 style_user = "bold purple"
 style_root = "bold red"
 show_always = true
@@ -31,7 +31,7 @@ disabled = false
 
 # Third param
 [directory]
-read_only = " "
+read_only = " 🔒"
 read_only_style = "bold red"
 style = "bold cyan"
 truncation_length = 0
@@ -39,8 +39,8 @@ truncate_to_repo = false
 truncation_symbol = "repo: "
 
 [character]
-success_symbol = "[╰─>](bold blue)"
-error_symbol = "[╰─×](bold red)"
+success_symbol = "[=>](bold blue)"
+error_symbol = "[=>](bold red)"
 
 [fill]
 symbol = " "
@@ -49,14 +49,10 @@ symbol = " "
 style = "bold purple"
 
 [package]
-symbol = " "
-
-[rlang]
-symbol = "ﳒ "
-format = 'with [$symbol $version](blue bold) '
+symbol = "📦"
 
 [rust]
-symbol = "🦀 "
+symbol = "🦀"
 
 [python]
 disable = false

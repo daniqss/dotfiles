@@ -1,4 +1,4 @@
-from libqtile import layout
+from libqtile import layout, qtile
 from libqtile.lazy import lazy
 from libqtile.config import Key
 from .to_import import *
@@ -60,6 +60,7 @@ keys = [
 
     # Floating
     Key([mod], "f", lazy.window.toggle_floating()),
+    Key([mod], "n", lazy.function(lambda: qtile.current_screen.write_text('ñ'))),
 
     # Terminal
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
