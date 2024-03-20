@@ -33,4 +33,4 @@ cd
 sudo rm -rf /tmp/hyprland_latest.tar.gz
 sudo rm -rf /tmp/hyprland
 
-echo "Hyprland se ha instalado correctamente."
+echo "Hyprland was updated to $latest_release_tag successfully!"

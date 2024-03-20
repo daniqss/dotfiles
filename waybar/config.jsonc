@@ -1,4 +1,4 @@
-{
+{  
   "include": "~/.config/waybar/modules.jsonc",
   "layer": "top",
   //"mode": "dock",
@@ -25,8 +25,8 @@
   "modules-center": [
       // "custom/media"
       // "hyprland/window"
-        "custom/media",
-        "clock"
+      // "custom/media",
+      "clock"
       // "wlr/taskbar"
     ], 
   
@@ -43,6 +43,6 @@
       "network"
       // "custom/lock",
       // "custom/power" 
-    ]
-  }
+  ]
+}
   

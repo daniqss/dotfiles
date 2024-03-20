@@ -76,8 +76,9 @@
   },
 
   "clock": {
-    "format": "{:%I:%M %p}",
-    //"format": " {:%H:%M}",
+    // "format": "{:%I:%M %p}",
+    // "format": " {:%H:%M}",
+    "format": "{:%H:%M %Y, %d %B}",
     "format-alt": " {:%H:%M   %Y, %d %B, %A}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
@@ -127,19 +128,21 @@
   },
 
   "hyprland/window": {
-    "format": "{title}",
+    "format": "{class}",
     "max-length": 20,
     "separate-outputs": true,
     "icon": false,
+    "on-click": "~/.config/hypr/scripts/default_app.py",
+    "on-click-right": "hyprctl dispatch killactive",
     // "on-click": "",
     "rewrite": {
       "(.*) - Visual Studio Code": "Code",
       "(.*) - Brave": "Brave",
-      // "(.*) - Obsidian": "Obsidian",
+      "(.*) - Obsidian": "Obsidian",
       "(.*) - Thunar": "Thunar",
       // "(.*) - Steam": "Steam",
       "(.*) - Google Chrome": "Chrome"
-  }
+    }
   },
 
   "hyprland/language": {
@@ -164,8 +167,8 @@
     "format-alt": "󰾆 {percentage}%",
     "format-alt-click": "click",
     "tooltip": true,
-    "tooltip-format": "{used:0.1f}GB/{total:0.1f}GB",
-    "on-click-right": "kitty --title btop sh -c 'btop'"
+    "tooltip-format": "{used:0.1f}GB/{total:0.1f}GB"
+    // "on-click-right": "kitty --title btop sh -c 'btop'"
   },
     
   "network": {
@@ -276,7 +279,7 @@
     // } 
 
     //"on-click-middle": "echo fdsafsa",
-    //"on-click-right": "$HOME/.config/hypr/scripts/default_app.py"
+    "on-click-right": "~/.config/hypr/scripts/default_app.py"
     //"on-scroll-up": "hyprctl dispatch workspace e+1",
     //"on-scroll-down": "hyprctl dispatch workspace e-1",
   },
@@ -359,7 +362,7 @@
   "custom/media": {
     "format": "{}",
     "return-type": "json",
-    "max-length": 40,
+    "max-length": 20,
     "escape": true,
     "format-icons": {
       "default": " ",
@@ -374,5 +377,7 @@
   "custom/arrow": {
     "format": "❯",
     "tooltip": false
+    // "on-click": "~/.config/hypr/scripts/default_app.py",
+    // "on-click-right": "hyprctl dispatch killactive"
   }
 }
