@@ -1,94 +1,48 @@
 {
-    "layer": "top",
-    "position": "top",
-    "margin-bottom": 0,
-    "modules-left": [
-      "clock",
-      "custom/separator",
-      "hyprland/workspaces",
-      "custom/separator",
-      "tray"
+  "include": "~/.config/waybar/modules.jsonc",
+  "layer": "top",
+  //"mode": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "position": "top",
+  "spacing": 3,
+  "fixed-center": true,
+  "ipc": true,
+  
+  "modules-left": [
+      "custom/menu", 
+      "hyprland/workspaces", 
+      "custom/arrow",
+      "hyprland/window",
+
+      //"temperature", 
+      //"disk", 
+      // "custom/weather",
+      "tray", 
+      "cava"
     ],
-    "modules-center": [
-      "hyprland/window"
-    ],
-    "modules-right": [
-      "network",
-      "temperature",
+    
+  "modules-center": [
+      // "custom/media"
+      // "hyprland/window"
+        "custom/media",
+        "clock"
+      // "wlr/taskbar"
+    ], 
+  
+  "modules-right": [
+      //"hyprland/window", 
+      //"backlight",
+      "cpu", 
       "memory",
-      "cpu",
+      "hyprland/language",
       "pulseaudio",
-      "battery",
-      "custom/separator",
-      "custom/powermenu"
-    ],
-    "custom/separator": {
-      "exec": "echo \"|\"",
-      "format": "{}"
-    },
-    "tray": {
-      "icon-size": 16,
-      "spacing": 8
-    },
-    "clock": {
-      "format": " {:%H:%M} ",
-      "interval": 60,
-      "tooltip": true,
-      "tooltip-format": "{:%d %B %H:%M}"
-    },
-    "hyprland/workspaces": {
-        
-      "format": "{icon}",
-      "on-scroll-up": "hyprctl dispatch workspace e-1",
-      "on-scroll-down": "hyprctl dispatch workspace e+1",
-      "on-click": "activate"
-  },
-    "hyprland/window": {
-      "format": "{}"
-    },
-    "network": {
-      "format": "󰖩 ",
-      "tooltip-format-ethernet": "{ifname} ",
-      "interface": "enp34s0",
-      "interval": 2
-    },
-    "temperature": {
-      "format": "{icon} {temperatureC}°C ",
-      "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-      "critical-threshold": 80,
-      "format-icons": [
-        "",
-        "",
-        ""
-      ]
-    },
-    "memory": {
-      "format": "󰍛 {}% ",
-      "tooltip": "false"
-    },
-    "cpu": {
-      "format": " {usage}% ",
-      "tooltip": "false"
-    },
-    "pulseaudio": {
-      "format": " {volume}%",
-      "scroll-step": 1,
-      "on-click": "pavucontrol"
-    },
-    "battery": {
-      "format": "{capacity}% {icon}",
-      "format-icons": [
-        "",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    "custom/powermenu": {
-      "format": "  ",
-      "tooltip": false,
-      "on-click": "~/.config/rofi/powermenu/type-5/powermenu.sh"
-    }
+      // "pulseaudio#microphone",
+      "battery", 
+      "custom/updater",
+      "network"
+      // "custom/lock",
+      // "custom/power" 
+    ]
   }
   

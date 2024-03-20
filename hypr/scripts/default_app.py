@@ -41,7 +41,7 @@ def open_default_app(current_workspace):
 
     default_app = group_apps.get(current_workspace)
     if default_app:
-        subprocess.run([f'{default_app}'])
+        subprocess.run([f'{default_app} & disown'], shell=True)
 
 if __name__ == "__main__":
     main()
