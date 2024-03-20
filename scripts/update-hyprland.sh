@@ -1,6 +1,10 @@
 #!/bin/bash
 
-# Update Hyprland from newer release
+# Update Hyprland from newer release if there's not a graphical session
+if [ $DESKTOP_SESSION != "hyprland"]; then
+    echo "Detected Hyprland running, please run from tty"
+    exit 1
+fi
 
 # Obtein the latest release tag 
 latest_release_url=$(curl -s -L https://api.github.com/repos/vaxerski/Hyprland/releases/latest | jq -r '.url')
