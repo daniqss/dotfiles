@@ -13,8 +13,8 @@
     "on-click-middle": "",
     "on-click-right": "",
     "on-update": "",
-    "on-scroll-up": "~/.config/hypr/scripts/Brightness.sh --inc",
-    "on-scroll-down": "~/.config/hypr/scripts/Brightness.sh --dec",
+    "on-scroll-up": "~/.config/waybar/scripts/Brightness.sh --inc",
+    "on-scroll-down": "~/.config/waybar/scripts/Brightness.sh --dec",
     "smooth-scrolling-threshold": 1
   },
     
@@ -78,7 +78,7 @@
   "clock": {
     // "format": "{:%I:%M %p}",
     // "format": " {:%H:%M}",
-    "format": "{:%H:%M %Y, %d %B}",
+    "format": "{:%H:%M}",
     "format-alt": " {:%H:%M   %Y, %d %B, %A}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
@@ -132,17 +132,25 @@
     "max-length": 20,
     "separate-outputs": true,
     "icon": false,
-    "on-click": "~/.config/hypr/scripts/default_app.py",
+    "on-click": "~/.config/waybar/scripts/minimaze.sh",
     "on-click-right": "hyprctl dispatch killactive",
+    "on-click-middle": "hyprctl dispatch togglefloating"
     // "on-click": "",
-    "rewrite": {
-      "(.*) - Visual Studio Code": "Code",
-      "(.*) - Brave": "Brave",
-      "(.*) - Obsidian": "Obsidian",
-      "(.*) - Thunar": "Thunar",
-      // "(.*) - Steam": "Steam",
-      "(.*) - Google Chrome": "Chrome"
-    }
+    // "rewrite": {
+    //   "(.*) - Visual Studio Code": "Code",
+    //   "(.*) - Brave": "Brave",
+    //   "(.*) - Obsidian": "Obsidian",
+    //   "(.*) - Thunar": "Thunar",
+    //   // "(.*) - Steam": "Steam",
+    //   "(.*) - Google Chrome": "Chrome"
+    // }
+  },
+
+  "custom/arrow": {
+    "format": "❯",
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/default_app.py"
+    // "on-click-right": "hyprctl dispatch killactive"
   },
 
   "hyprland/language": {
@@ -150,7 +158,7 @@
     "format-en": "US",
     "format-es": "ES",
     "keyboard-name": "at-translated-set-2-keyboard",
-    "on-click": "~/.config/hypr/scripts/change_layout.sh"
+    "on-click": "~/.config/waybar/scripts/change_layout.sh"
   },
     
   "idle_inhibitor": {
@@ -173,7 +181,7 @@
     
   "network": {
     "format": "{ifname}",
-    "format-wifi": "{essid} ",
+    "format-wifi": " {essid}",
     // "format-wifi": "{essid}   {bandwidthUpBytes}  {bandwidthDownBytes}",
     "format-ethernet": "󰈀  {bandwidthUpBytes}  {bandwidthDownBytes}",
     "format-disconnected": "", //An empty format will hide the module.
@@ -188,8 +196,8 @@
     
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-bluetooth": "{icon}  {volume}%",
-    "format-muted": " Mute",
+    "format-bluetooth": " {volume}%",
+    "format-muted": " ",
     "format-icons": {
         "headphone": "",
         "hands-free": "",
@@ -201,10 +209,10 @@
     "ignored-sinks": ["Easy Effects Sink"]
   },
     "scroll-step": 5.0,
-    "on-click": "~/.config/hypr/scripts/Volume.sh --toggle",
+    "on-click": "~/.config/waybar/scripts/Volume.sh --toggle",
     "on-click-right": "pavucontrol",
-    "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --inc",
-    "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --dec",
+    "on-scroll-up": "~/.config/waybar/scripts/Volume.sh --inc",
+    "on-scroll-down": "~/.config/waybar/scripts/Volume.sh --dec",
     "smooth-scrolling-threshold": 1
   },
 
@@ -212,10 +220,10 @@
     "format": "{format_source}",
     "format-source": " {volume}%",
     "format-source-muted": " Mute",
-    "on-click": "~/.config/hypr/scripts/Volume.sh --toggle-mic",
+    "on-click": "~/.config/waybar/scripts/Volume.sh --toggle-mic",
     "on-click-right": "pavucontrol",
-    "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --mic-inc",
-    "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --mic-dec",
+    "on-scroll-up": "~/.config/waybar/scripts/Volume.sh --mic-inc",
+    "on-scroll-down": "~/.config/waybar/scripts/Volume.sh --mic-dec",
     "scroll-step": 5
   },
 
@@ -239,10 +247,10 @@
   "wireplumber": {
     "format": "{icon} {volume} %",
     "format-muted": " Mute",
-    "on-click": "~/.config/hypr/scripts/Volume.sh --toggle",
+    "on-click": "~/.config/waybar/scripts/Volume.sh --toggle",
     "on-click-right": "pavucontrol",
-    "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --inc",
-    "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --dec",
+    "on-scroll-up": "~/.config/waybar/scripts/Volume.sh --inc",
+    "on-scroll-down": "~/.config/waybar/scripts/Volume.sh --dec",
     "format-icons": ["", "", ""]
   },
     
@@ -278,10 +286,8 @@
     //   "*": 9
     // } 
 
-    //"on-click-middle": "echo fdsafsa",
-    "on-click-right": "~/.config/hypr/scripts/default_app.py"
-    //"on-scroll-up": "hyprctl dispatch workspace e+1",
-    //"on-scroll-down": "hyprctl dispatch workspace e-1",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
   },
 
 
@@ -298,9 +304,9 @@
     
   "custom/cycle_wall":{
     "format":" ",
-    "on-click": "~/.config/hypr/scripts/WallpaperSelect.sh",
-    "on-click-right": "~/.config/hypr/scripts/Wallpaper.sh swww",
-    "on-click-middle": "~/.config/hypr/scripts/WaybarStyles.sh",
+    "on-click": "~/.config/waybar/scripts/WallpaperSelect.sh",
+    "on-click-right": "~/.config/waybar/scripts/Wallpaper.sh swww",
+    "on-click-middle": "~/.config/waybar/scripts/WaybarStyles.sh",
     "tooltip": true,
     "tooltip-format": "Change wallpaper or style"
   },
@@ -308,18 +314,18 @@
   "custom/keybindings": {
     "format":"",
     "tooltip": false,
-    "on-click": "~/.config/hypr/scripts/Help.sh"
+    "on-click": "~/.config/waybar/scripts/Help.sh"
   },
 
   "custom/light_dark": {
     "format": "",
-    "on-click": "~/.config/hypr/scripts/DarkLight.sh",
+    "on-click": "~/.config/waybar/scripts/DarkLight.sh",
     "tooltip": false
   },
     
   "custom/lock": {
     "format": "",
-    "on-click": "~/.config/hypr/scripts/LockScreen.sh",
+    "on-click": "~/.config/waybar/scripts/LockScreen.sh",
     "tooltip": false
   },
 
@@ -328,14 +334,14 @@
     "tooltip": false,
     "on-click": "$HOME/.config/hypr/scripts/Wofi.sh",
     "on-click-right": "$HOME/.config/hypr/scripts/ChangeLayoutMenu.sh",
-    "on-click-middle": "~/.config/hypr/scripts/Wallpaper.sh swaybg"
+    "on-click-middle": "~/.config/waybar/scripts/Wallpaper.sh swaybg"
   },
     
   "custom/power": {
     "format": "",
     "tooltip": false,
     "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
-    "on-click-right": "~/.config/hypr/scripts/ChangeBlur.sh"
+    "on-click-right": "~/.config/waybar/scripts/ChangeBlur.sh"
   },
 
   "custom/updater":{
@@ -344,7 +350,7 @@
     "exec-if": "[[ $(checkupdates | wc -l) ]]",
     "interval": 30
     // "on-click": "foot -T update yay -Syu && notify-send 'The system has been updated'",
-    // "on-click-right": "~/.config/hypr/scripts/WallpaperSwitch.sh"
+    // "on-click-right": "~/.config/waybar/scripts/WallpaperSwitch.sh"
   },
 
   "custom/weather": {
@@ -353,8 +359,7 @@
     "format-alt-click": "click",
     "interval": 3600,
     "return-type": "json",
-    "exec": "~/.config/hypr/scripts/weather.sh",
-    //"exec": "~/.config/hypr/scripts/weather.py",
+    "exec": "~/.config/waybar/scripts/weather.py",
     "exec-if": "ping wttr.in -c1",
     "tooltip" : true
   },
@@ -371,13 +376,6 @@
     "on-click": "playerctl play-pause",
     "on-click-right": "playerctl next",
     "on-click-middle": "playerctl previous",
-    "exec": "~/.config/hypr/scripts/mediaplayer.py --player spotify 2> /dev/null"
-  },
-
-  "custom/arrow": {
-    "format": "❯",
-    "tooltip": false
-    // "on-click": "~/.config/hypr/scripts/default_app.py",
-    // "on-click-right": "hyprctl dispatch killactive"
+    "exec": "~/.config/waybar/scripts/mediaplayer.py --player spotify 2> /dev/null"
   }
 }

@@ -13,36 +13,23 @@
       "custom/menu", 
       "hyprland/workspaces", 
       "custom/arrow",
-      "hyprland/window",
-
-      //"temperature", 
-      //"disk", 
-      // "custom/weather",
-      "tray", 
-      "cava"
+      "hyprland/window"
     ],
     
   "modules-center": [
-      // "custom/media"
-      // "hyprland/window"
-      // "custom/media",
       "clock"
-      // "wlr/taskbar"
     ], 
   
   "modules-right": [
-      //"hyprland/window", 
-      //"backlight",
-      "cpu", 
-      "memory",
+      // "cpu", 
+      // "memory",
+      "tray",
       "hyprland/language",
       "pulseaudio",
-      // "pulseaudio#microphone",
+      "pulseaudio#microphone",
+      "bluetooth",
       "battery", 
-      "custom/updater",
       "network"
-      // "custom/lock",
-      // "custom/power" 
   ]
 }
   
