@@ -67,21 +67,22 @@ tooltip label {
 
 #workspaces {
   background: #9ca3ad;
-  margin: 2px 0px 3px 1px;
+  margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
   border-radius: 15px;
   border: 0px;
   font-weight: bold;
   font-style: normal;
   opacity: 0.8;
-  font-size: 16px;
+  font-size: 1px;
 }
 
 #workspaces button {
   padding: 0px 10px;
-  margin: 1px 3px 1px 3px;
+  margin: 7px 3px 7px 3px;
   border-radius: 15px;
   border: 0px;
+  min-width: 10px;
   background-color: #d2d5da;
   color: #212429;
   transition: all 0.3s ease-in-out;
@@ -92,7 +93,8 @@ tooltip label {
   color: #212429;
   background: #ffffff;
   border-radius: 15px;
-  min-width: 40px;
+  min-width: 25px;
+  /* min-width: 30px; */
   transition: all 0.3s ease-in-out;
   opacity:1.0;
 }
@@ -104,30 +106,6 @@ tooltip label {
   opacity:0.7;
 }
 
-
-/* #workspaces button {
-    padding: 2px;
-    color: #6E6A86;
-}
-   
-#workspaces button.active {
-  color: #ffffff;
-  border-radius: 10px;
-}
-  
-#workspaces button.focused {
-    color: #d8dee9;
-}
-
-#workspaces button.urgent {
-    color: #11111b;
-    border-radius: 10px;
-}
-   
-#workspaces button:hover {
-    color: #9CCFD8;
-    border-radius: 10px;
-} */
 
 #clock,
 #battery,
@@ -172,14 +150,11 @@ tooltip label {
 #idle_inhibitor {
   color: #ffffff;
   border-radius: 5px;
-  padding: 1px 3px 1px 3px;
+  padding: 0px 3px 0px 3px;
   /* background-color: #1e1e32; */
   background-color: #272C33;
-  font-size: 16px;
-  margin-left: 4px;
-  margin-right: 4px;
-  margin-top: 4px;
-  margin-bottom: 4px;
+  font-size: 14px;
+  margin: 0px 4px 0px 4px;
 }
 
 #custom-arrow {
@@ -197,8 +172,8 @@ tooltip label {
 
 #custom-menu {
   color: #00ffff;
-  font-size: 24px;
-  padding: 1px 3px 1px 6px;
+  font-size: 23px;
+  padding: 1px 3px 1px 8px;
 }
 
 #custom-power {
@@ -222,6 +197,10 @@ tooltip label {
   color: #e4bff2;
 }
 
+#disk {
+  color: #b9ee88;
+}
+
 #pulseaudio {
   color: #70e6c2;
 }
@@ -232,6 +211,18 @@ tooltip label {
 
 #network {
   color: #fff8ce;
+}
+
+#bluetooth + #network {
+  padding-right: 0; 
+  padding-left: 0; 
+  margin-right: 0;
+  margin-left: 0;
+}
+
+#bluetooth {
+  color: #8b89ec;
+  font-size: 18px;
 }
 
 #memory {

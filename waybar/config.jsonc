@@ -1,4 +1,4 @@
-{  
+{
   "include": "~/.config/waybar/modules.jsonc",
   "layer": "top",
   //"mode": "dock",
@@ -8,28 +8,25 @@
   "spacing": 3,
   "fixed-center": true,
   "ipc": true,
-  
+
   "modules-left": [
-      "custom/menu", 
-      "hyprland/workspaces", 
-      "custom/arrow",
-      "hyprland/window"
-    ],
-    
-  "modules-center": [
-      "clock"
-    ], 
-  
+    "custom/menu",
+    "hyprland/workspaces",
+    "custom/arrow",
+    "hyprland/window",
+    "tray"
+  ],
+
+  "modules-center": ["clock"],
+
   "modules-right": [
-      // "cpu", 
-      // "memory",
-      "tray",
-      "hyprland/language",
-      "pulseaudio",
-      "pulseaudio#microphone",
-      "bluetooth",
-      "battery", 
-      "network"
+    "disk",
+    "memory",
+    "cpu",
+    "hyprland/language",
+    "pulseaudio",
+    "battery",
+    "bluetooth",
+    "network"
   ]
 }
-  

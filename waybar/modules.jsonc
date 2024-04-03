@@ -44,12 +44,13 @@
   },
     
   "bluetooth": {
-    "format": "",
-    "format-disabled": "", // an empty format will hide the module
-    "format-connected": " {num_connections}",
-    "tooltip-format": " {device_alias}",
+    "format": "󰂯",
+    "format-disabled": "󰂯", // an empty format will hide the module
+    "format-connected": "󰂯",
+    "tooltip-format": "󰂯 {device_alias}",
     "tooltip-format-connected": "{device_enumerate}",
-    "tooltip-format-enumerate-connected": " {device_alias}"
+    "tooltip-format-enumerate-connected": "󰂯 {device_alias}",
+    "on-right-click": "blueberry"
   },
 
   "cava": {
@@ -181,7 +182,7 @@
     
   "network": {
     "format": "{ifname}",
-    "format-wifi": " {essid}",
+    "format-wifi": " ",
     // "format-wifi": "{essid}   {bandwidthUpBytes}  {bandwidthDownBytes}",
     "format-ethernet": "󰈀  {bandwidthUpBytes}  {bandwidthDownBytes}",
     "format-disconnected": "", //An empty format will hide the module.
@@ -199,20 +200,20 @@
     "format-bluetooth": " {volume}%",
     "format-muted": " ",
     "format-icons": {
-        "headphone": "",
-        "hands-free": "",
-        "headset": "",
-        "phone": "",
-        "portable": "",
-        "car": "",
-    "default": ["", "", ""],
-    "ignored-sinks": ["Easy Effects Sink"]
-  },
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""],
+      "ignored-sinks": ["Easy Effects Sink"]
+    },
     "scroll-step": 5.0,
-    "on-click": "~/.config/waybar/scripts/Volume.sh --toggle",
+    "on-click": "amixer set Master toggle > /dev/null",
     "on-click-right": "pavucontrol",
-    "on-scroll-up": "~/.config/waybar/scripts/Volume.sh --inc",
-    "on-scroll-down": "~/.config/waybar/scripts/Volume.sh --dec",
+    "on-scroll-up": "amixer set Master 5%+ > /dev/null",
+    "on-scroll-down": "amixer set Master 5%- > /dev/null",
     "smooth-scrolling-threshold": 1
   },
 
@@ -220,10 +221,10 @@
     "format": "{format_source}",
     "format-source": " {volume}%",
     "format-source-muted": " Mute",
-    "on-click": "~/.config/waybar/scripts/Volume.sh --toggle-mic",
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
     "on-click-right": "pavucontrol",
-    "on-scroll-up": "~/.config/waybar/scripts/Volume.sh --mic-inc",
-    "on-scroll-down": "~/.config/waybar/scripts/Volume.sh --mic-dec",
+    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
+    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%",
     "scroll-step": 5
   },
 
@@ -262,32 +263,22 @@
     // "active-only": false,
     //"sort-by-number": true,
     "on-click": "activate",
+    "on-right-click": "hyprctl dispatch workspace e+1",
     "active-only": false,
     "all-outputs": true,
-    // "format": "{icon}",
+    "format": "{icon}",
 
-    // "format-icons": {
-    //   "1": "I",
-    //   "2": "II",
-    //   "3": "III",
-    //   "4": "IV",
-    //   "5": "V",
-    //   "6": "VI",
-    //   "7": "VII",
-    //   "8": "VIII",
-    //   "9": "IX",
-
-    //   "urgent": "",
-    //   "active": "",
-    //   "default": "",
-    //   "OVERVIEW": "TAB"
-    // },
-    // "persistent-workspaces": {
-    //   "*": 9
-    // } 
-
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1"
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": ""
+    }
   },
 
 

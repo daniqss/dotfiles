@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTFILE=~/.config/zsh/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
 setopt autocd beep extendedglob nomatch
 unsetopt notify
 # bindkey -v
@@ -30,12 +30,17 @@ bindkey '^H' backward-kill-word
 eval "pokeget random --hide-name"
 eval "$(starship init zsh)"
 
-alias ls='lsd --color=auto'
-alias la='lsd --color=auto -a'
-alias ll='lsd --color=auto -l'
-alias lla='lsd --color=auto -la'
+alias ls='exa --icons'
+alias la='exa --icons -a'
+alias ll='exa --header --icons --git -t=mod --time-style=long-iso -l'
+alias lla='exa --header --icons --git -t=mod --time-style=long-iso -la'
+alias ts='exa --tree --level=2'
+alias tsa='exa --tree --level=2'
+alias tl='exa --tree --level=2 --header --icons -t=mod --time-style=long-iso -l'
+alias tla='exa --tree --level=2 --header --icons -t=mod --time-style=long-iso -la'
+alias treee='exa --tree --icons'
 alias grep='grep --color=auto'
-# alias cat='bat --style=plain --paging=never'
+alias cat='bat --paging=never'
 alias icat='kitten icat'
 alias cls='clear'
 alias pSyu='sudo pacman -Syu'
