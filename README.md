@@ -14,6 +14,9 @@
 - **Notifications**: [dunst](https://github.com/dunst-project/dunst)
 - **Fonts:**  FiraCodeNerdFont, CaskaydiaCoveNerdFont, CascadiaCode, OpenSans, liberation, noto
 
+> [!warning] 
+> This configuration is no longer used or maintained
+
 ## Qtile
 
 * [Qtile](qtile.org)
