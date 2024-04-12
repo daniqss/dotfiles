@@ -10,6 +10,7 @@ while true; do
   
   if [[ "$cache" != "$wallpaper" ]]; then
     cache="$wallpaper"
+    cp $wallpaper ./lock_wallpaper.png
     hyprctl hyprpaper unload all
     hyprctl hyprpaper preload "$wallpaper"
     for m in "${monitor[@]}"; do

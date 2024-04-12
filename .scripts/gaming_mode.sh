@@ -3,6 +3,8 @@
 HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
 
 if [ "$HYPRGAMEMODE" = 1 ] ; then
+    # hyprctl plugin unload /usr/lib/libhycov.so
+    # sleep 2
     hyprctl --batch "\
         keyword animations:enabled 0;\
         keyword decoration:drop_shadow 0;\
