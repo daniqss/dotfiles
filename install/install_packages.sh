@@ -102,6 +102,7 @@ pacman_packages=(
     "thunar"
     "steam"
     "discord"
+    "chromium"
     
     # Development
     "nodejs"
@@ -118,7 +119,8 @@ yay_packages=(
     "visual-studio-code-bin"
     "brave-bin"
     "spotify"
-    "google-chrome-stable"
+    "xpadneo"
+    # "google-chrome-stable"
 
     # Fonts
     "ttf-cascadia-code"

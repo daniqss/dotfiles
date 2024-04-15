@@ -10,6 +10,7 @@ All the packages are listed in the [install_packages](./install/install_packages
 git clone --depth 1 --branch main https://github.com/daniqss/dotfiles.git
 cd dotfiles
 ./install/install_packages.sh
+./install/install_configs.sh
 ```
 > [!WARNING]  
 > The script will install remove all the config folders that may conflict with the dotfiles.
