@@ -11,7 +11,8 @@ git clone --depth 1 --branch main https://github.com/daniqss/dotfiles.git
 cd dotfiles
 ./install/install_packages.sh
 ```
-> **Warning:** The script will install remove all the config folders that may conflict with the dotfiles.
+> [!WARNING]  
+> The script will install remove all the config folders that may conflict with the dotfiles.
 > Make sure to backup your files before running the script.
 
 
