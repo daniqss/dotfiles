@@ -21,7 +21,7 @@
 
   "modules-right": [
     "disk",
-    "memory",
+    //"memory",
     "cpu",
     "hyprland/language",
     "pulseaudio",
