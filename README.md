@@ -1,6 +1,7 @@
 # dotfiles
 My current ArchLinux setup. Using [Hyprland](https://hyprland.org) and *eventually* [ags](https://github.com/Aylur/ags)
-
+> [!WARNING]  
+> For my qtile configurations search in the branch [qtile](https://github.com/daniqss/dotfiles/tree/qtile)
 
 ## Installation
 To install the dotfiles, you need to clone the repository and run [`the installation script`](./install/install.sh).
