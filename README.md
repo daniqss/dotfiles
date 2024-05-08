@@ -1,5 +1,5 @@
 # dotfiles
-My current ArchLinux setup. Using [Hyprland](https://hyprland.org) and *maybe* [ags](https://github.com/Aylur/ags)
+My current ArchLinux setup. Using [Hyprland](https://hyprland.org) and *eventually* [ags](https://github.com/Aylur/ags)
 
 
 ## Installation
