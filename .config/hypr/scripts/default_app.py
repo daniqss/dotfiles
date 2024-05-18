@@ -29,7 +29,7 @@ def get_monitors_data():
 def open_default_app(current_workspace):
     group_apps = {
         "1": "code",
-        "2": "brave",
+        "2": "chromium",
         "3": "kitty",
         "4": "obsidian",
         "5": "thunar",

@@ -1,32 +1,70 @@
+// {
+//   "include": "~/.config/waybar/modules.jsonc",
+//   "layer": "top",
+//   //"mode": "dock",
+//   "exclusive": true,
+//   "passthrough": false,
+//   "position": "top",
+//   "spacing": 3,
+//   "fixed-center": true,
+//   "ipc": true,
+
+//   "modules-left": [
+//     "custom/menu",
+//     "hyprland/workspaces",
+//     "custom/arrow",
+//     "hyprland/window",
+//     "tray"
+//   ],
+
+//   "modules-center": ["clock"],
+
+//   "modules-right": [
+//     "disk",
+//     //"memory",
+//     "cpu",
+//     "hyprland/language",
+//     "pulseaudio",
+//     "battery",
+//     "bluetooth",
+//     "network"
+//   ]
+// }
+
 {
   "include": "~/.config/waybar/modules.jsonc",
-  "layer": "top",
-  //"mode": "dock",
+  "layer": "down",
   "exclusive": true,
   "passthrough": false,
   "position": "top",
   "spacing": 3,
   "fixed-center": true,
   "ipc": true,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "margin-bottom": 0,
 
   "modules-left": [
-    "custom/menu",
-    "hyprland/workspaces",
-    "custom/arrow",
-    "hyprland/window",
-    "tray"
+    "hyprland/workspaces", 
+    "hyprland/window"
+    // "wlr/taskbar",
+    // "custom/cava"
   ],
-
-  "modules-center": ["clock"],
-
+  
+  "modules-center": [
+    // "hyprland/window"
+    "clock",
+    "custom/cava"
+    // "mpris"
+  ],
+  
   "modules-right": [
-    "disk",
-    //"memory",
+    "tray", 
     "cpu",
-    "hyprland/language",
+    "temperature",
+    "memory",
     "pulseaudio",
-    "battery",
-    "bluetooth",
-    "network"
+    "battery"
   ]
 }
