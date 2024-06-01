@@ -68,7 +68,7 @@ pacman_packages=(
     "starship"
     "neovim"
     "micro"
-    "neofetch"
+    "fastfetch"
     "htop"
     "bottom"
     "exa"
@@ -97,7 +97,6 @@ pacman_packages=(
     "wofi"
     "dunst"
     "waybar"
-    "firefox"
     "obsidian"
     "thunar"
     "steam"
@@ -111,13 +110,14 @@ pacman_packages=(
     "python"
     "python-pip"
     "python-pipx"
+    "rust"
 )
 
 # Define yay packages
 yay_packages=(
     # Apps
-    "visual-studio-code-bin"
-    "brave-bin"
+    # "visual-studio-code-bin"
+    # "brave-bin"
     "spotify"
     "xpadneo"
     # "google-chrome-stable"
@@ -148,3 +148,5 @@ nvidia_packages=(
 )
 
 main()
+
+
