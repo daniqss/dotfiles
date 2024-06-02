@@ -11,9 +11,11 @@ main() {
         exit 0
     fi
 
+    echo "Updating system..."
+    sudo pacman -Syu
     # Install packages
     install_pacman_packages
-    install_yay_packages
+    # install_yay_packages
 
     read -p "Do you want to install Nvidia packages? (y/n): " nvidia
     nvidia="${nvidia,,}"
@@ -27,18 +29,24 @@ main() {
 # Function to install packages using pacman
 install_pacman_packages() {
     echo "Installing pacman packages..."
-    sudo pacman -Syu --noconfirm ${pacman_packages[@]}
+    for package in "${pacman_packages[@]}"; do
+        sudo pacman -S --noconfirm "$package"
+    done
 }
 
 # Function to install packages using yay
 install_yay_packages() {
     echo "Installing yay packages..."
-    yay -Syu --noconfirm ${yay_packages[@]}
+    for package in "${yay_package[@]}"; do
+        yay -S --noconfirm ${yay_packages[@]}
+    done
 }
 
 install_nvidia_packages() {
     echo "Installing Nvidia packages..."
-    sudo pacman -Syu --noconfirm ${nvidia_packages[@]}
+    for package in "${nvidia_packages[@]}"; do
+        sudo pacman -S --noconfirm ${nvidia_packages[@]}
+    done
 }
 
 # Define pacman packages
@@ -87,7 +95,6 @@ pacman_packages=(
     
     # Network
     "networkmanager"
-    "network-manager"
     "nm-connection-editor"
     "bluez"
     "bluez-utils"
@@ -147,6 +154,5 @@ nvidia_packages=(
     "opencl-nvidia"
 )
 
-main()
-
+main
 
