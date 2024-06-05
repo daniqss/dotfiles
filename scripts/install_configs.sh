@@ -10,3 +10,4 @@ cp -r ~/dotfiles/.config/dunst ~/.config/dunst
 cp -r ~/dotfiles/.config/waybar ~/.config/waybar
 cp -r ~/dotfiles/.config/kitty ~/.config/kitty
 cp -r ~/dotfiles/.config/zsh ~/.config/zsh
+cp ~/dotfiles/.config/starship.toml ~/.config/starship.toml

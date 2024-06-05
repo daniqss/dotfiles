@@ -1,0 +1,65 @@
+# Alacritty Colors
+
+# Normal colors
+[colors.normal]
+  black = '#15171c'     # color0
+  red = '#ec5f67'       # color1
+  green = '#80a763'     # color2
+  yellow = '#fdc253'    # color3
+  blue = '#5485c0'      # color4
+  magenta = '#bf83c0'   # color5
+  cyan = '#57c2c0'      # color6
+  white = '#eeece7'     # color7
+
+# Bright colors
+[colors.bright]
+  black = '#545454'     # color8
+  red = '#ff6973'       # color9
+  green = '#93d393'     # color10
+  yellow = '#ffd156'    # color11
+  blue = '#4d83d0'      # color12
+  magenta = '#ff55ff'   # color13
+  cyan = '#83e8e4'      # color14
+  white = '#ffffff'     # color15
+
+# Primary colors
+[colors.primary]
+  background = '#212121'            # background
+  foreground = '#bdb9ae'            # foreground
+
+[cursor]
+  blink_interval = 5
+  style = 'Beam'
+  thickness = 0.2
+  unfocused_hollow = true
+
+[font]
+  size = 14
+
+[font.bold]
+  family = 'CaskaydiaCove Nerd Font Mono'
+  style = 'Bold'
+
+[font.bold_italic]
+  family = 'CaskaydiaCove Nerd Font Mono'
+  style = 'Bold Italic'
+
+
+[font.italic]
+  family = 'CaskaydiaCove Nerd Font Mono'
+  style = 'italic'
+
+[font.normal]
+  family = 'CaskaydiaCove Nerd Font Mono'
+  style = 'Regular'
+
+[font.offset]
+  x = 0
+  y = 0
+
+[window]
+  opacity = 0.8
+
+[window.padding]
+  x = 15
+  y = 5

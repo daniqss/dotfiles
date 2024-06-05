@@ -27,7 +27,7 @@ bindkey "\033[1~" beginning-of-line
 bindkey "\033[4~" end-of-line
 bindkey '^H' backward-kill-word
 
-eval "pokeget random --hide-name"
+# eval "pokeget random --hide-name"
 eval "$(starship init zsh)"
 
 alias ls='exa --icons'
@@ -53,9 +53,24 @@ alias yR='yay -R'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/git-bare/dotfiles/ --work-tree=$HOME/.config'
 alias FIC='/usr/bin/git --git-dir=$HOME/git-bare/FIC --work-tree=$HOME/Dropbox/Obsidian/FIC'
 # alias dotfiles-add='dotfiles add alacritty dun'
-source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.config/zsh/zsh-shift-select/zsh-shift-select.plugin.zsh
+
+
+plugins=(
+  "$HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+  "$HOME/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
+  "$HOME/.config/zsh/sudo.plugin.zsh"
+)
+for file in $plugins; do
+  if [[ ! -f $file ]]; then
+    ./install_plugins.sh
+    break
+  fi
+done
+for file in $plugins; do
+  if [[ -f $file ]]; then
+    source $file
+  fi
+done
 
 # bun completions
 [ -s "/home/ranicocs/.bun/_bun" ] && source "/home/ranicocs/.bun/_bun"

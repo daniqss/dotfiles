@@ -60,11 +60,7 @@ pacman_packages=(
     hyprland
     xdg-desktop-portal-hyprland
     hyprpaper
-    hyprpicker
     hyprcursor
-    hyprshot
-    hyprlock
-    hypridle
     
     # Terminal
     kitty
@@ -78,7 +74,7 @@ pacman_packages=(
     exa
     bat
     
-    # Audio
+    # Settings
     pavucontrol
     pipewire
     gst-plugin-pipewire
@@ -87,16 +83,14 @@ pacman_packages=(
     pipewire-jack
     pipewire-pulse
     wireplumber
-    
-    # Network
     networkmanager
     nm-connection-editor
     bluez
     bluez-utils
     blueberry
+    nwg-look
     
     # Apps
-    chromium
     wofi
     dunst
     waybar
@@ -104,6 +98,13 @@ pacman_packages=(
     thunar
     steam
     discord
+
+    # ags
+    cava
+    dart-sass
+    fd
+    gtk3
+    
     
     # Development
     nodejs
@@ -113,13 +114,32 @@ pacman_packages=(
     python-pip
     python-pipx
     rust
+
+    # miscelaneous
+    brigthnessctl
+    playerctl
+    cliphist
+    ydotool
+    wl-clipboard
+    swappy
 )
 
 # Define yay packages
 yay_packages=(
+	# hyprland
+    hyprpicker
+    hyprlock
+    hypridle
+
+    # ags
+    aylurs-gtk-shell
+	swww
+    gromit-mpx
+    matugen-bin
+
     # Apps
     spotify
-    xpadneo
+    xpadneo-dkms
 
     # Fonts
     ttf-bitstream-vera
@@ -135,6 +155,11 @@ yay_packages=(
     ttf-roboto
     noto-fonts-emoji
     ttf-ubuntu-nerd
+
+    # themes
+    bibata-cursor-theme
+    orchis-theme-git
+    orchis-kde-theme-curve-git
 )
 
 # Define Nvidia packages
