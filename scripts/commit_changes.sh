@@ -5,6 +5,7 @@ cp -r ~/.config/alacritty ~/dotfiles/.config/
 cp -r ~/.config/rofi ~/dotfiles/.config/
 cp -r ~/.config/dunst ~/dotfiles/.config/
 cp -r ~/.config/kitty ~/dotfiles/.config/
+cp -r ~/.config/gtk3.0 ~/dotfiles.config/
 cp ~/.config/starship.toml ~/dotfiles/.config/
 
 cp -r ~/.config/zsh ~/dotfiles/.config/
