@@ -34,7 +34,7 @@
   unfocused_hollow = true
 
 [font]
-  size = 14
+  size = 15
 
 [font.bold]
   family = 'CaskaydiaCove Nerd Font Mono'
@@ -58,7 +58,7 @@
   y = 0
 
 [window]
-  opacity = 0.8
+  opacity = 0.90
 
 [window.padding]
   x = 15

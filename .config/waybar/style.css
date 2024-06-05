@@ -12,19 +12,15 @@
 
 
 window#waybar {
-  background-color: rgba(10, 10, 10, 0.80);
+  background-color: rgba(10, 10, 10, 0.9);
   transition-property: background-color;
-  transition-duration: 0.5s;
+  transition-duration: 0.5s;;
 }
 
 window#waybar.hidden {
   opacity: 0.5;
 
 }
-
-/* window#waybar.empty {
-  background-color: transparent;
-} */
 
 window#waybar.empty #window {
   padding: 0px;

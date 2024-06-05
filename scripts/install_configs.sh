@@ -1,13 +1,19 @@
 #!/bin/bash
 
-rm -rf ~/.scripts ~/.wallpapers > /dev/null
-rm -rf ~/.config/hypr ~/.config/dunst ~/.config/waybar ~/.config/kitty ~/.config/zsh  > /dev/null
+if [ -e "$HOME/.wallpapers" ]; then
+rm -rf "$HOME/.wallpapers" > /dev/null
+fi
+cp -r "$HOME/dotfiles/.wallpapers" "$HOME/.wallpapers"
 
-cp -r ~/dotfiles/.scripts ~/.scripts
-cp -r ~/dotfiles/.wallpapers ~/.wallpapers
-cp -r ~/dotfiles/.config/hypr ~/.config/hypr
-cp -r ~/dotfiles/.config/dunst ~/.config/dunst
-cp -r ~/dotfiles/.config/waybar ~/.config/waybar
-cp -r ~/dotfiles/.config/kitty ~/.config/kitty
-cp -r ~/dotfiles/.config/zsh ~/.config/zsh
-cp ~/dotfiles/.config/starship.toml ~/.config/starship.toml
+DOTFILES_DIR="$HOME/dotfiles/.config"
+DEST_DIR="$HOME/.config"
+
+for item in "$DOTFILES_DIR"/*; do
+  basename_item=$(basename "$item")
+  dest_item="$DEST_DIR/$basename_item"
+
+  if [ -e "$dest_item" ]; then
+    rm -rf "$dest_item" > /dev/null
+  fi
+  cp -r "$item" "$DEST_DIR"
+done

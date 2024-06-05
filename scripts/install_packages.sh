@@ -73,6 +73,7 @@ pacman_packages=(
     bottom
     exa
     bat
+    cava
     
     # Settings
     pavucontrol
@@ -98,13 +99,6 @@ pacman_packages=(
     thunar
     steam
     discord
-
-    # ags
-    cava
-    dart-sass
-    fd
-    gtk3
-    
     
     # Development
     nodejs
@@ -118,10 +112,6 @@ pacman_packages=(
     # miscelaneous
     brigthnessctl
     playerctl
-    cliphist
-    ydotool
-    wl-clipboard
-    swappy
 )
 
 # Define yay packages
@@ -130,12 +120,7 @@ yay_packages=(
     hyprpicker
     hyprlock
     hypridle
-
-    # ags
-    aylurs-gtk-shell
 	swww
-    gromit-mpx
-    matugen-bin
 
     # Apps
     spotify
