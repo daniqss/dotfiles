@@ -33,7 +33,7 @@ def open_default_app(current_workspace):
         "3": "kitty",
         "4": "obsidian",
         "5": "thunar",
-        "6": "~/.config/rofi/types/type-7/launcher.sh",
+        "6": "~/.config/scripts/wofi.sh",
         "7": "steam",
         "8": "spotify",
         "9": "google-chrome-stable"
