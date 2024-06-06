@@ -42,6 +42,8 @@ tooltip label {
 #clock,
 #cpu,
 #memory,
+#disk,
+#bluetooth,
 #mpris,
 #network,
 #pulseaudio,
@@ -53,8 +55,8 @@ tooltip label {
   color: #ebdbb2;
   padding-top: 1px;
   padding-bottom: 1px;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 #window {
@@ -115,3 +117,5 @@ tooltip label {
 #temperature.critical {
   background-color: red;
 }
+
+

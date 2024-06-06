@@ -50,8 +50,8 @@ alias ySyu='yay -Syu'
 alias yS='yay -S'
 alias yR='yay -R'
 
-alias dotfiles='/usr/bin/git --git-dir=$HOME/git-bare/dotfiles/ --work-tree=$HOME/.config'
-alias FIC='/usr/bin/git --git-dir=$HOME/git-bare/FIC --work-tree=$HOME/Dropbox/Obsidian/FIC'
+# alias dotfiles='/usr/bin/git --git-dir=$HOME/git-bare/dotfiles/ --work-tree=$HOME/.config'
+# alias FIC='/usr/bin/git --git-dir=$HOME/git-bare/FIC --work-tree=$HOME/Dropbox/Obsidian/FIC'
 # alias dotfiles-add='dotfiles add alacritty dun'
 
 
@@ -60,12 +60,6 @@ plugins=(
   "$HOME/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
   "$HOME/.config/zsh/sudo.plugin.zsh"
 )
-for file in $plugins; do
-  if [[ ! -f $file ]]; then
-    ./install_plugins.sh
-    break
-  fi
-done
 for file in $plugins; do
   if [[ -f $file ]]; then
     source $file

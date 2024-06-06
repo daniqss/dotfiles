@@ -46,25 +46,24 @@
   "margin-bottom": 0,
 
   "modules-left": [
-    "hyprland/workspaces", 
+    "hyprland/workspaces",
     "hyprland/window"
-    // "wlr/taskbar",
-    // "custom/cava"
   ],
-  
+
   "modules-center": [
     // "hyprland/window"
     "clock",
     "custom/cava"
     // "mpris"
   ],
-  
+
   "modules-right": [
-    "tray", 
+    "tray",
     "cpu",
+    "disk",
     "temperature",
     "memory",
-    "pulseaudio",
-    "battery"
+    "bluetooth",
+    "pulseaudio"
   ]
 }

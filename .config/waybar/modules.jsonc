@@ -1,34 +1,5 @@
 {
-  // "hyprland/workspaces": {
-  //   "active-only": false,
-  //   "all-outputs": false,
-  //   "show-special": false,
-  //   "on-click": "activate",
-  //   "on-scroll-up": "hyprctl dispatch workspace e+1",
-  //   "on-scroll-down": "hyprctl dispatch workspace e-1",
-
-  //   "format": "{name}",
-
-  //   // "format-icons": {
-  //   //   "1": "1",
-  //   //   "2": "2",
-  //   //   "3": "3",
-  //   //   "4": "4",
-  //   //   "5": "5",
-  //   //   "6": "6",
-  //   //   "7": "7",
-  //   //   "8": "8",
-  //   //   "9": "9",
-  //   //   "OVERVIEW": "*"
-  //   // }
-  // },
-
   "hyprland/workspaces": {
-    //"format": "{name}: {icon}",
-    // "on-click": "activate",
-    // "all-outputs": false,
-    // "active-only": false,
-    //"sort-by-number": true,
     "on-click": "activate",
     "on-right-click": "hyprctl dispatch workspace e+1",
     "active-only": false,
@@ -219,6 +190,13 @@
     "on-click": "activate",
     "on-click-middle": "close",
     "ignore-list": ["wofi", "rofi", "kitty"]
+  },
+
+  "disk": {
+    "interval": 30,
+    "path": "/",
+    "format": "{percentage_used}% 󰋊",
+    "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)"
   },
 
   "custom/cava": {
