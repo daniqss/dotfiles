@@ -17,8 +17,6 @@ compinit
 export PATH="$HOME/.cargo/bin/:$HOME/.config/scripts:$PATH"
 export JAVA_HOME=/opt/jdk-20.0.2
 export PATH=$JAVA_HOME/bin:$PATH
-export WEZTERM_CONFIG_FILE="$HOME/.config/wezterm/wezterm.lua"
-
 
 bindkey "^[[3~" delete-char
 bindkey "^[[1;5C" forward-word
@@ -41,6 +39,7 @@ alias tla='exa --tree --level=2 --header --icons -t=mod --time-style=long-iso -l
 alias treee='exa --tree --icons'
 alias grep='grep --color=auto'
 alias cat='bat --paging=never'
+alias catp='bat --paging=never --plain'
 alias icat='kitten icat'
 alias cls='clear'
 alias pSyu='sudo pacman -Syu'

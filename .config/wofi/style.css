@@ -1,0 +1,133 @@
+/* // :root { */
+/* //   --primary: #e95420 */
+/* //   --primary-dark: #A6401C */
+/* // } */
+
+/* :root {
+    --syntax-tag: rgba(57, 186, 230, 1);
+    --syntax-func: rgba(255, 180, 84, 1);
+    --syntax-entity: rgba(89, 194, 255, 1);
+    --syntax-string: rgba(170, 217, 76, 1);
+    --syntax-regexp: rgba(149, 230, 203, 1);
+    --syntax-markup: rgba(240, 113, 120, 1);
+    --syntax-keyword: rgba(255, 143, 64, 1);
+    --syntax-special: rgba(230, 182, 115, 1);
+    --syntax-comment: rgba(172, 182, 191, 0.55);
+    --syntax-constant: rgba(210, 166, 255, 1);
+    --syntax-operator: rgba(242, 150, 104, 1);
+
+    --vcs-added: rgba(127, 217, 98, 1);
+    --vcs-modified: rgba(115, 184, 255, 1);
+    --vcs-removed: rgba(242, 109, 120, 1);
+
+    --editor-fg: rgba(191, 189, 182, 1);
+    --editor-bg: rgba(13, 16, 23, 1);
+    --editor-line: rgba(19, 23, 33, 1);
+    --editor-selection-active: rgba(64, 159, 255, 0.3);
+    --editor-selection-inactive: rgba(64, 159, 255, 0.13);
+    --editor-findMatch-active: rgba(108, 89, 128, 1);
+    --editor-findMatch-inactive: rgba(108, 89, 128, 0.4);
+    --editor-gutter-active: rgba(108, 115, 128, 0.9);
+    --editor-gutter-normal: rgba(108, 115, 128, 0.6);
+    --editor-indentGuide-active: rgba(108, 115, 128, 0.5);
+    --editor-indentGuide-normal: rgba(108, 115, 128, 0.2);
+
+    --ui-fg: rgba(86, 91, 102, 1);
+    --ui-bg: rgba(11, 14, 20, 1);
+    --ui-line: rgba(17, 21, 28, 1);
+    --ui-selection-active: rgba(71, 82, 102, 0.25);
+    --ui-selection-normal: rgba(71, 82, 102, 0.2);
+    --ui-panel-bg: rgba(15, 19, 26, 1);
+    --ui-panel-shadow: rgba(0, 0, 0, 0.5);
+
+    @define-color common-accent rgba(230, 180, 80, 1);
+    --common-accent: rgba(255, 143, 64, 1);
+    --common-error: rgba(217, 87, 87, 1);
+}
+
+@define-color syntax-tag rgba(57, 186, 230, 1);
+@define-color syntax-func rgba(255, 180, 84, 1);
+@define-color syntax-entity rgba(89, 194, 255, 1);
+@define-color syntax-string rgba(170, 217, 76, 1);
+@define-color syntax-regexp rgba(149, 230, 203, 1);
+@define-color syntax-markup rgba(240, 113, 120, 1);
+@define-color syntax-keyword rgba(255, 143, 64, 1);
+@define-color syntax-special rgba(230, 182, 115, 1);
+@define-color syntax-comment rgba(172, 182, 191, 0.55);
+@define-color syntax-constant rgba(210, 166, 255, 1);
+@define-color syntax-operator rgba(242, 150, 104, 1);
+
+@define-color vcs-added rgba(127, 217, 98, 1);
+@define-color vcs-modified rgba(115, 184, 255, 1);
+@define-color vcs-removed rgba(242, 109, 120, 1);
+
+@define-color editor-fg rgba(191, 189, 182, 1);
+@define-color editor-bg rgba(13, 16, 23, 1);
+@define-color editor-line rgba(19, 23, 33, 1);
+@define-color editor-selection-active rgba(64, 159, 255, 0.3);
+@define-color editor-selection-inactive rgba(64, 159, 255, 0.13);
+@define-color editor-findMatch-active rgba(108, 89, 128, 1);
+@define-color editor-findMatch-inactive rgba(108, 89, 128, 0.4);
+@define-color editor-gutter-active rgba(108, 115, 128, 0.9);
+@define-color editor-gutter-normal rgba(108, 115, 128, 0.6);
+@define-color editor-indentGuide-active rgba(108, 115, 128, 0.5);
+@define-color editor-indentGuide-normal rgba(108, 115, 128, 0.2);
+
+@define-color ui-fg rgba(86, 91, 102, 1);
+@define-color ui-bg rgba(11, 14, 20, 1);
+@define-color ui-line rgba(17, 21, 28, 1);
+@define-color ui-selection-active rgba(71, 82, 102, 0.25);
+@define-color ui-selection-normal rgba(71, 82, 102, 0.2);
+@define-color ui-panel-bg rgba(15, 19, 26, 1);
+@define-color ui-panel-shadow rgba(0, 0, 0, 0.5);
+
+@define-color common-accent rgba(230, 180, 80, 1);
+@define-color common-accent rgba(255, 143, 64, 1);
+@define-color common-error rgba(217, 87, 87, 1);
+*/
+
+
+* {
+  font-family: "Google Sans";
+  color: #e5e9f0;
+  background: transparent;
+}
+
+#window {
+  background: rgba(15, 19, 26, 0.9);
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  border: 3px solid #DFD0A9;
+}
+
+#input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+#outer-box {
+  padding: 20px;
+}
+
+#img {
+  margin-right: 10px;
+}
+
+#entry {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#entry:selected {
+  background-color: rgba(71, 82, 102, 0.4);
+  border: none;
+  outline: none;
+}
+
+#text {
+  margin: 2px;
+}
+
+#text:selected {}

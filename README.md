@@ -1,11 +1,15 @@
-# dotfiles
-My current ArchLinux setup. Using [Hyprland](https://hyprland.org) and *eventually* [ags](https://github.com/Aylur/ags)
-> [!WARNING]  
-> For my qtile configurations search in the [qtile](https://github.com/daniqss/dotfiles/tree/qtile) branch
+# ⏳️dust
+My [Hyprland](https://hyprland.org) and [waybar](https://github.com/Alexays/waybar) rice!
 
-## Installation
+## screenshots
+![screenshot](./assets/screenshot1.png)
+![screenshot](./assets/screenshot2.png)
+![screenshot](./assets/screenshot3.png)
+
+## installation
 To install the dotfiles, you need to clone the repository and run [`the installation script`](./install/install.sh).
 All the packages are listed in the [install_packages](./install/install_packages.sh). You can modify it to your needs.
+This script _may_ not work, i use it to list my packages 
 
 ```bash
 git clone --depth 1 --branch main https://github.com/daniqss/dotfiles.git
@@ -30,13 +34,10 @@ cd dotfiles
 | `mod+m`              | Kill hyprland              |
 | `mod+f`              | Toggle fullscreen          |
 | `mod+Tab`            | Launch wofi                |
-| `alt+Tab`            | Hycov Overview             |
-| `mod+alt+Tab`        | Power Menu                 |
-| `mod+e`              | Rofi emoji                 |
+| `mod+e`              | Smile                      |
 | `mod+p`              | Open workspace default app |
 | `mod+b`              | hide waybar                |
-| `Print`              | Screenshot                 |
-| `mod + g`            | Gaming mode                |
+| `Print` || `mod+m`   | Screenshot                 |
 | `Print`              | Hyprshot                   |
 | `mod+Shift+[hjkl]`   | Move window                |
 | `mod+Control+[hjkl]` | Resize window              |

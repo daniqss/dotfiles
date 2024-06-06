@@ -117,6 +117,7 @@ pacman_packages=(
 # Define yay packages
 yay_packages=(
 	# hyprland
+    # yay -S --mflags '--nocheck' hyprswitch
     hyprpicker
     hyprlock
     hypridle
@@ -145,6 +146,7 @@ yay_packages=(
     bibata-cursor-theme
     orchis-theme-git
     orchis-kde-theme-curve-git
+    tela-circle-icon-theme-all
 )
 
 # Define Nvidia packages

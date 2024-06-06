@@ -37,20 +37,20 @@
   size = 15
 
 [font.bold]
-  family = 'CaskaydiaCove Nerd Font Mono'
+  family = 'CaskaydiaCove Nerd Font'
   style = 'Bold'
 
 [font.bold_italic]
-  family = 'CaskaydiaCove Nerd Font Mono'
+  family = 'CaskaydiaCove Nerd Font'
   style = 'Bold Italic'
 
 
 [font.italic]
-  family = 'CaskaydiaCove Nerd Font Mono'
+  family = 'CaskaydiaCove Nerd Font'
   style = 'italic'
 
 [font.normal]
-  family = 'CaskaydiaCove Nerd Font Mono'
+  family = 'CaskaydiaCove Nerd Font'
   style = 'Regular'
 
 [font.offset]
@@ -58,7 +58,7 @@
   y = 0
 
 [window]
-  opacity = 0.90
+  opacity = 0.8
 
 [window.padding]
   x = 15
