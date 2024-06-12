@@ -4,7 +4,6 @@ My [Hyprland](https://hyprland.org) and [waybar](https://github.com/Alexays/wayb
 ## screenshots
 ![screenshot](./assets/screenshot1.png)
 ![screenshot](./assets/screenshot2.png)
-![screenshot](./assets/screenshot3.png)
 
 ## installation
 To install the dotfiles, you need to clone the repository and run the installation scripts.
