@@ -1,4 +1,4 @@
-# ⏳️dust
+# 🌹garden
 My [Hyprland](https://hyprland.org) and [waybar](https://github.com/Alexays/waybar) rice!
 
 ## screenshots
