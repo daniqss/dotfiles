@@ -112,6 +112,12 @@ pacman_packages=(
     # miscelaneous
     brigthnessctl
     playerctl
+
+    #sddm theme
+    sddm
+    qt6-5compat
+    qt6-declarative
+    qt6-svg
 )
 
 # Define yay packages
