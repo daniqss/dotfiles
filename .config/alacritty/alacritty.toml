@@ -24,7 +24,8 @@
 
 # Primary colors
 [colors.primary]
-  background = '#212121'            # background
+  # background = '#212121'            # background
+  background = '#111111'
   foreground = '#bdb9ae'            # foreground
 
 [cursor]
@@ -58,7 +59,7 @@
   y = 0
 
 [window]
-  opacity = 0.8
+  opacity = 0.5
 
 [window.padding]
   x = 15

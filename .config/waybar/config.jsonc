@@ -1,69 +1,22 @@
-// {
-//   "include": "~/.config/waybar/modules.jsonc",
-//   "layer": "top",
-//   //"mode": "dock",
-//   "exclusive": true,
-//   "passthrough": false,
-//   "position": "top",
-//   "spacing": 3,
-//   "fixed-center": true,
-//   "ipc": true,
-
-//   "modules-left": [
-//     "custom/menu",
-//     "hyprland/workspaces",
-//     "custom/arrow",
-//     "hyprland/window",
-//     "tray"
-//   ],
-
-//   "modules-center": ["clock"],
-
-//   "modules-right": [
-//     "disk",
-//     //"memory",
-//     "cpu",
-//     "hyprland/language",
-//     "pulseaudio",
-//     "battery",
-//     "bluetooth",
-//     "network"
-//   ]
-// }
-
 {
   "include": "~/.config/waybar/modules.jsonc",
-  "layer": "down",
-  "exclusive": true,
-  "passthrough": false,
-  "position": "top",
-  "spacing": 3,
-  "fixed-center": true,
-  "ipc": true,
-  "margin-top": 0,
+  "layer": "top",
+  "position": "up",
+  "reload_style_on_change": true,
+  "height": 20,
+  "margin-bottom": 0,
   "margin-left": 0,
   "margin-right": 0,
-  "margin-bottom": 0,
-
-  "modules-left": [
-    "hyprland/workspaces",
-    "hyprland/window"
-  ],
-
-  "modules-center": [
-    // "hyprland/window"
-    "clock",
-    "custom/cava"
-    // "mpris"
-  ],
-
+  "modules-left": ["custom/power", "tray", "hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["custom/notification", "custom/lizzy"],
   "modules-right": [
-    "tray",
-    "cpu",
-    "disk",
-    "temperature",
     "memory",
+    "cpu",
+    "temperature",
+    "network",
     "bluetooth",
-    "pulseaudio"
+    "wireplumber",
+    "battery",
+    "clock"
   ]
 }

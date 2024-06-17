@@ -19,8 +19,10 @@ switch_to_workspace() {
     local workspace="$1"
     if [[ $# -eq 2 ]]; then
         local activemonitor="$2"
+        echo "moving workspace $workspace to monitor $activemonitor"
         hyprctl dispatch moveworkspacetomonitor "$workspace $activemonitor"
     fi
+    echo "switching to workspace $1"
     hyprctl dispatch workspace "$workspace"
 }
 
@@ -49,6 +51,7 @@ main() {
         switch_to_workspace "$workspace" "$activemonitor"
     else
         swap_active_workspaces "$activemonitor" "$passivemonitor"
+        # hyprctl dispatch togglesplit
     fi
 }
 

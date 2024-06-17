@@ -1,86 +1,22 @@
 {
   "hyprland/workspaces": {
-    "on-click": "activate",
-    "on-right-click": "hyprctl dispatch workspace e+1",
-    "active-only": false,
     "all-outputs": true,
     "format": "{icon}",
-
     "format-icons": {
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-    }
-  },
-
-  "bluetooth": {
-    "format": "  ",
-    "format-disabled": " 󰂳 ",
-    "format-connected": " 󰂱 {num_connections} ",
-    "tooltip-format": " {device_alias}",
-    "tooltip-format-connected": "{device_enumerate}",
-    "tooltip-format-enumerate-connected": " {device_alias} 󰂄{device_battery_percentage}%",
-    "tooltip": true,
-    "on-click": "blueberry"
-  },
-
-  "battery": {
-    "interval": 60,
-    "align": 0,
-    "rotate": 0,
-    //"bat": "BAT1",
-    //"adapter": "ACAD",
-    "full-at": 100,
-    "design-capacity": false,
-    "states": {
-      "good": 95,
-      "warning": 30,
-      "critical": 15
+      "1": "✨",
+      "2": "🦊",
+      "3": "🥸",
+      "4": "📚️",
+      "5": "💾",
+      "6": "🌈",
+      "7": "🌺",
+      "8": "🪇",
+      "9": "🌙"
     },
-    "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-full": "{icon} Full",
-    //"format-good": "",
-    "format-alt": "{icon} {time}",
-    "format-icons": ["", "", "", "", ""],
-    "format-time": "{H}h {M}min",
-    "tooltip": true,
-    "on-click-right": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown"
-  },
-
-  "clock": {
-    "interval": 1,
-    "format": "   {:%H:%M} ",
-    "format-alt": "   {:%H:%M     %Y, %d %B, %A} ",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "calendar": {
-      "mode": "year",
-      "mode-mon-col": 3,
-      "weeks-pos": "right",
-      "on-scroll": 1,
-      "format": {
-        "days": "<span color='#ebdbb2'><b>{}</b></span>",
-        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-        "weekdays": "<span color='#ebdbb2'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-      }
-    }
-  },
-  "actions": {
-    "on-click-right": "mode",
-    "on-click-forward": "tz_up",
-    "on-click-backward": "tz_down",
-    "on-scroll-up": "shift_up",
-    "on-scroll-down": "shift_down"
-  },
-
-  "cpu": {
-    "format": " {usage}% 󰍛 ",
-    "interval": 1,
-    "on-click-right": "gnome-system-monitor"
+    "on-scroll-up": "hyprctl dispatch workspace e+1 1>/dev/null",
+    "on-scroll-down": "hyprctl dispatch workspace e-1 1>/dev/null",
+    "sort-by-number": true,
+    "active-only": false
   },
 
   "hyprland/window": {
@@ -97,49 +33,33 @@
     }
   },
 
+  "custom/lizzy": {
+    "format": "<span color='#25be6a'>{icon}</span>  {}",
+    "exec": "lizzy --format ' {{title}}' --mediaplayer spotify",
+    "return-type": "json",
+    "format-icons": {
+      "Playing": "",
+      "Paused": ""
+    },
+    "max-length": 45,
+    "on-click": "playerctl --player=spotify play-pause",
+    "on-scroll-up": "playerctl --player=spotify next",
+    "on-scroll-down": "playerctl --player=spotify previous"
+  },
+
   "memory": {
     "interval": 10,
-    "format": " {percentage}% 󰾆 ",
+    "format": "<span color='#cba6f7'> 󰾆</span> {percentage}%",
     "format-alt-click": "click",
     "tooltip": true,
     "tooltip-format": "{used:0.1f}GB/{total:0.1f}G",
     "on-click-right": "kitty -c ~/.config/kitty/kitty.conf --title btop sh -c 'btop'"
   },
 
-  "mpris": {
-    "interval": 10,
-    "format": " {title} ",
-    "format-paused": " {title}",
-    "on-click": "playerctl play-pause",
-    "on-click-right": "playerctl next",
-    "scroll-step": 5.0,
-    "smooth-scrolling-threshold": 1,
-    "status-icons": {
-      "paused": "󰐎",
-      "playing": "",
-      "stopped": ""
-    },
-    "max-length": 30
-  },
-
-  "pulseaudio": {
-    "format": " {volume}% {icon} ",
-    "format-bluetooth": " 󰂰 {volume}% {icon} ",
-    "format-muted": "󰖁",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", "", "󰕾", ""],
-      "ignored-sinks": ["Easy Effects Sink"]
-    },
-    "scroll-step": 5.0,
-    "on-click": "pavucontrol -t 3",
-    "tooltip-format": "{icon} {desc} | {volume}%",
-    "smooth-scrolling-threshold": 1
+  "cpu": {
+    "format": "<span color='#89b4fa'> 󰍛</span> {usage}%",
+    "interval": 1,
+    "on-click-right": "gnome-system-monitor"
   },
 
   "temperature": {
@@ -150,42 +70,18 @@
       "/sys/class/thermal/thermal_zone0/temp"
     ],
     "critical-threshold": 82,
-    "format-critical": "{temperatureC}°C {icon}",
-    "format": " {temperatureC}°C {icon} ",
-    "format-icons": ["󰈸"],
+    "format-critical": "<span color='#e57474'>󰈸</span> {temperatureC}°C",
+    "format": "<span color='#94e2d5'> 󰈸</span> {temperatureC}°C ",
     "on-click-right": "kitty -c ~/.config/kitty/kitty.conf --title nvtop sh -c 'nvtop'"
   },
 
-  "custom/swaync": {
-    "tooltip": true,
-    "format": " {} {icon} ",
-    "format-icons": {
-      "notification": "<span foreground='red'><sup></sup></span>",
-      "none": "",
-      "dnd-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-none": "",
-      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "inhibited-none": "",
-      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-inhibited-none": ""
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "sleep 0.1 && swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
+  "custom/nvidia": {
+    "format": "<span color='#94e2d5'> 󰈸</span> {}% ",
+    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+    "interval": 3,
+    "format-tooltip": "GPU Usage"
   },
 
-  "wlr/taskbar": {
-    "format": " {icon} ",
-    "icon-size": 20,
-    "all-outputs": false,
-    "tooltip-format": "{title}",
-    "on-click": "activate",
-    "on-click-middle": "close",
-    "ignore-list": ["wofi", "rofi", "kitty"]
-  },
 
   "disk": {
     "interval": 30,
@@ -194,9 +90,112 @@
     "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)"
   },
 
-  "custom/cava": {
-    "exec": "~/.config/waybar/scripts/waybar_cava.sh",
-    "format": "{}",
-    "on-click": "spotify & disown"
+  "backlight": {
+    "format": "<span color='#8ccf7e'>󱩖 </span>  {percent}%   ",
+    "device": "intel_backlight",
+    "on-scroll-down": "brightnessctl s 5%-",
+    "on-scroll-up": "brightnessctl s +5%"
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    },
+    "tooltip": "true"
+  },
+
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "all-outputs": true,
+    "icon-size": 24,
+    "icon-theme": "Orchis-Purple-Dark-Compact",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition"
+    },
+    "rewrite": {
+      "Firefox Web Browser": "Firefox",
+      "Foot Server": "Terminal"
+    }
+  },
+
+  "wireplumber": {
+    "on-click": "pavucontrol",
+    "on-click-right": "amixer sset Master toggle 1>/dev/null",
+    "format": "<span foreground='#e5c76b'>{icon}</span> {volume}%",
+    "format-muted": "<span foreground='#e5c76b'></span>  Muted",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": [" ", " ", " "]
+    }
+  },
+  "network": {
+    "format-wifi": "<span color='#67b0e8'></span>",
+    "format-ethernet": "<span color='#67b0e8'></span>",
+    "format-linked": "<span color='#67b0e8'></span>  {ifname} (No IP)",
+    "format": "<span color='#67b0e8'></span>  Connected",
+    "format-disconnected": "<span color='#67b0e8'></span>  Disconnected",
+    "interval": 60,
+    "on-click": "~/.config/rofi/rofi-wifi-menu.sh"
+  },
+  "clock": {
+    "format": "<span color='#ee5396'></span> {:%R  %d·%m·%y}",
+    "rotate": 0,
+    "format-alt": "<span color='#ee5396'></span> {:%R %d·%m·%y}",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+  "battery": {
+    "interval": 2,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "<span color='#8ccf7e'>{icon}</span>   {capacity}%",
+    "format-charging": "<span color='#8ccf7e'></span>  {capacity}%",
+    "format-plugged": "<span color='#8ccf7e'></span>  {capacity}%",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "bluetooth": {
+    "format-on": "<span color='#e57474'></span>  Turned On",
+    "format-off": "<span color='#e57474'></span>  Turned Off",
+    "format-disabled": "<span color='#e57474'></span>  Disabled",
+    "format-connected": "<span color='#e57474'></span> Connected",
+    "format": "<span color='#e57474'></span> Disabled",
+    "on-click": "blueberry &"
+  },
+  "custom/power": {
+    "format": "",
+    "on-click": "~/.config/rofi/powermenu/type-4/powermenu.sh"
+  },
+  "custom/notification": {
+    "format": "󱅫",
+    "on-click": "swaync-client -t -sw"
   }
 }
