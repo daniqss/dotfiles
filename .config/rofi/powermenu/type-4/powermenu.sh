@@ -18,14 +18,23 @@ uptime="`uptime -p | sed -e 's/up //g'`"
 host=`hostname`
 
 # Options
-shutdown=''
-hibernate=''
-reboot=''
-lock=''
-suspend=''
-logout=''
-yes=''
-no=''
+# shutdown=''
+# hibernate=''
+# reboot=''
+# lock=''
+# suspend=''
+# logout=''
+# yes=''
+# no=''
+
+hibernate='h'
+shutdown='p'
+reboot='r'
+lock='l'
+suspend='s'
+logout='l'
+yes='yes'
+no='no'
 
 # Rofi CMD
 rofi_cmd() {
@@ -62,7 +71,7 @@ run_cmd() {
 		elif [[ $1 == '--reboot' ]]; then
 			systemctl reboot
 		elif [[ $1 == '--suspend' ]]; then
-			mpc -q pause
+			playerctl pause
 			amixer set Master mute
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then

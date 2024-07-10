@@ -8,5 +8,5 @@
  **/
 
 * {
-    font: "IBM Plex Sans Medium 10";
+    font: "Firacode Nerd Font Bold 10";
 }
