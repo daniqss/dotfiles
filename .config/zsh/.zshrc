@@ -8,7 +8,7 @@ unsetopt notify
 set noci
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/ranicocs/.zshrc'
+zstyle :compinstall filename '/home/daniqss/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -48,6 +48,12 @@ alias pR='sudo pacman -R'
 alias ySyu='yay -Syu'
 alias yS='yay -S'
 alias yR='yay -R'
+
+alias gits='git status'
+alias gita='git add'
+alias gitc='git commit -m'
+alias gitca='git commit -am'
+alias gitkey='cat $GITHUB_KEY_PATH | wl-copy'
 
 # alias dotfiles='/usr/bin/git --git-dir=$HOME/git-bare/dotfiles/ --work-tree=$HOME/.config'
 # alias FIC='/usr/bin/git --git-dir=$HOME/git-bare/FIC --work-tree=$HOME/Dropbox/Obsidian/FIC'
