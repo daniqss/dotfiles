@@ -12,7 +12,7 @@ case $workspace_id in
     5) thunar & disown ;;
     6) ~/.config/scripts/wofi.sh & disown ;;
     7) steam & disown ;;
-    8) spotify & disown ;;
+    8) spotify-launcher & disown ;;
     9) google-chrome-stable & disown ;;
     *) ;;
 esac
