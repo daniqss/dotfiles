@@ -1,22 +1,27 @@
 {
   "include": "~/.config/waybar/modules.jsonc",
   "layer": "top",
-  "position": "up",
-  "reload_style_on_change": true,
-  "height": 20,
-  "margin-bottom": 0,
-  "margin-left": 0,
-  "margin-right": 0,
-  "modules-left": ["custom/power", "tray", "hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["custom/notification", "custom/lizzy"],
+  "exclusive": true,
+  "passthrough": false,
+  "position": "top",
+  "spacing": 3,
+  "fixed-center": true,
+  "ipc": true,
+  "height": 36,
+
+  "modules-left": ["custom/menu", "hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
   "modules-right": [
-    "memory",
-    "cpu",
-    "temperature",
+    "custom/picker",
+    "custom/clipboard",
+    "custom/screenshot",
+    "custom/separator",
     "network",
     "bluetooth",
+    "custom/separator", 
     "wireplumber",
-    "battery",
-    "clock"
+    "custom/separator", 
+    "tray",
+    "custom/power"
   ]
 }

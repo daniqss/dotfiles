@@ -1,201 +1,129 @@
 {
   "hyprland/workspaces": {
-    "all-outputs": true,
-    "format": "{icon}",
-    "format-icons": {
-      "1": "✨",
-      "2": "🦊",
-      "3": "🥸",
-      "4": "📚️",
-      "5": "💾",
-      "6": "🌈",
-      "7": "🌺",
-      "8": "🪇",
-      "9": "🌙"
-    },
-    "on-scroll-up": "hyprctl dispatch workspace e+1 1>/dev/null",
-    "on-scroll-down": "hyprctl dispatch workspace e-1 1>/dev/null",
-    "sort-by-number": true,
-    "active-only": false
-  },
-
-  "hyprland/window": {
-    "format": " {class} ",
-    "max-length": 60,
-    "separate-outputs": true,
-    "offscreen-css": true,
-    "offscreen-css-text": "(inactive)",
-    "rewrite": {
-      "(.*) — Mozilla Firefox": " $1",
-      "(.*) - fish": "> [$1]",
-      "(.*) - zsh": "> [$1]",
-      "(.*) - kitty": "> [$1]"
-    }
-  },
-
-  "custom/lizzy": {
-    "format": "<span color='#25be6a'>{icon}</span>  {}",
-    "exec": "lizzy --format ' {{title}}' --mediaplayer spotify",
-    "return-type": "json",
-    "format-icons": {
-      "Playing": "",
-      "Paused": ""
-    },
-    "max-length": 45,
-    "on-click": "playerctl --player=spotify play-pause",
-    "on-scroll-up": "playerctl --player=spotify next",
-    "on-scroll-down": "playerctl --player=spotify previous"
-  },
-
-  "memory": {
-    "interval": 10,
-    "format": "<span color='#cba6f7'> 󰾆</span> {percentage}%",
-    "format-alt-click": "click",
-    "tooltip": true,
-    "tooltip-format": "{used:0.1f}GB/{total:0.1f}G",
-    "on-click-right": "kitty -c ~/.config/kitty/kitty.conf --title btop sh -c 'btop'"
-  },
-
-  "cpu": {
-    "format": "<span color='#89b4fa'> 󰍛</span> {usage}%",
-    "interval": 1,
-    "on-click-right": "gnome-system-monitor"
-  },
-
-  "temperature": {
-    "interval": 10,
-    "tooltip": true,
-    "hwmon-path": [
-      "/sys/class/hwmon/hwmon1/temp1_input",
-      "/sys/class/thermal/thermal_zone0/temp"
-    ],
-    "critical-threshold": 82,
-    "format-critical": "<span color='#e57474'>󰈸</span> {temperatureC}°C",
-    "format": "<span color='#94e2d5'> 󰈸</span> {temperatureC}°C ",
-    "on-click-right": "kitty -c ~/.config/kitty/kitty.conf --title nvtop sh -c 'nvtop'"
-  },
-
-  "custom/nvidia": {
-    "format": "<span color='#94e2d5'> 󰈸</span> {}% ",
-    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
-    "interval": 3,
-    "format-tooltip": "GPU Usage"
-  },
-
-
-  "disk": {
-    "interval": 30,
-    "path": "/",
-    "format": "{percentage_used}% 󰋊",
-    "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)"
-  },
-
-  "backlight": {
-    "format": "<span color='#8ccf7e'>󱩖 </span>  {percent}%   ",
-    "device": "intel_backlight",
-    "on-scroll-down": "brightnessctl s 5%-",
-    "on-scroll-up": "brightnessctl s +5%"
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": ""
-    },
-    "tooltip": "true"
-  },
-
-  "wlr/taskbar": {
-    "format": "{icon}",
-    "all-outputs": true,
-    "icon-size": 24,
-    "icon-theme": "Orchis-Purple-Dark-Compact",
-    "tooltip-format": "{title}",
     "on-click": "activate",
-    "on-click-middle": "close",
-    "app_ids-mapping": {
-      "firefoxdeveloperedition": "firefox-developer-edition"
-    },
+    "active-only": false,
+    "all-outputs": true
+  },
+  
+  "hyprland/window": {
+    "max-length": 60,
+    "icon": true,
+    "icon-size": 26 ,
+    "separate-outputs": true,
     "rewrite": {
-      "Firefox Web Browser": "Firefox",
-      "Foot Server": "Terminal"
+      "(.*) — Mozilla Firefox": "Firefox",
+      "Obsidian - (.*)": "Obsidian",
+      "(.*) - Google Chrome": "Chrome"
     }
+  },
+  
+  "custom/menu": {
+    "format": "<span foreground='#89b4fa'></span>",
+    "tooltip": false,
+    "on-click": "$HOME/.config/rofi/launchers/type-3/launcher.sh"
+  },
+
+  "custom/separator": {
+    "format": "|",
+    "tooltip": false
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "{:%H:%M %d-%m-%y}",
+    "format-alt": "   {:%H:%M     %Y, %d %B, %A} ",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "days": "<span color='#ebdbb2'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ebdbb2'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 3
+  },
+
+  "custom/clipboard": {
+    "format": "󰨸",
+    "tooltip": false,
+    "on-click": ""
+  },
+
+  "custom/picker": {
+    "format": "󰋅",
+    "tooltip": false,
+    "on-click": "hyprpicker | wl-copy"
+  },
+
+  "custom/screenshot": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "hyprshot -m region"
+  },
+
+  "network": {
+    "format-icons": [
+      "<span foreground='#EA6962'>󰤟 {ipaddr}</span>",
+      "<span foreground='#D3869B'>󰤢 {ipaddr}</span>",
+      "<span foreground='#89B482'>󰤥 {ipaddr}</span>",
+      "<span foreground='#7DAEA3'>󰤨 {ipaddr}</span>"
+    ],
+    "format-ethernet": "<span foreground='#FFFACD'>󰈀 </span>{ipaddr}",
+    "format-linked": "{ifname} (No IP) ",
+    "format": "{icon} {essid}",
+    "format-disconnected": "<span foreground='#353231'>󰤭 </span>Disconnected",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "on-click-right":"sleep 0.1 && bash ~/.config/rofi/rofi-wifi-menu.sh",
+    "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
+    "tooltip-format-wifi": " {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
+    "interval": 10
+  },
+
+  "bluetooth": {
+    "format": "<span foreground='#87B0F9'></span>",
+    "format-disabled": "<span foreground='#89b4fa'>󰂳</span>",
+    "format-connected": "<span foreground='#89b4fa'></span> {device_alias}",
+    "tooltip-format-enumerate-connected": " {device_alias} 󰂄{device_battery_percentage}%",
+    "tooltip": true,
+    "on-click": "blueberry"
   },
 
   "wireplumber": {
-    "on-click": "pavucontrol",
-    "on-click-right": "amixer sset Master toggle 1>/dev/null",
-    "format": "<span foreground='#e5c76b'>{icon}</span> {volume}%",
-    "format-muted": "<span foreground='#e5c76b'></span>  Muted",
+    "on-click": "amixer sset Master toggle 1>/dev/null",
+    "on-click-right": "sleep 0.1 && pavucontrol",
+    "format": "{icon}  {volume}%",
+    "format-muted": " <span foreground='#A6E3A1'></span> Mute",
+    "format-source": "",
+    "format-source-muted": " ",
     "format-icons": {
-      "headphone": " ",
-      "hands-free": " ",
-      "headset": " ",
-      "phone": " ",
-      "portable": " ",
-      "car": " ",
-      "default": [" ", " ", " "]
+        "headphone": " ",
+        "hands-free": " ",
+        "headset": " ",
+        "phone": " ",
+        "portable": " ",
+        "car": " ",
+        "default": [
+          "<span foreground='#A6E3A1'></span>",
+          "<span foreground='#A6E3A1'></span>", 
+          "<span foreground='#A6E3A1'></span>",
+          "<span foreground='#A6E3A1'></span>"
+        ]
     }
   },
-  "network": {
-    "format-wifi": "<span color='#67b0e8'></span>",
-    "format-ethernet": "<span color='#67b0e8'></span>",
-    "format-linked": "<span color='#67b0e8'></span>  {ifname} (No IP)",
-    "format": "<span color='#67b0e8'></span>  Connected",
-    "format-disconnected": "<span color='#67b0e8'></span>  Disconnected",
-    "interval": 60,
-    "on-click": "~/.config/rofi/rofi-wifi-menu.sh"
-  },
-  "clock": {
-    "format": "<span color='#ee5396'></span> {:%R  %d·%m·%y}",
-    "rotate": 0,
-    "format-alt": "<span color='#ee5396'></span> {:%R %d·%m·%y}",
-    "tooltip-format": "<tt>{calendar}</tt>",
-    "calendar": {
-      "mode": "month",
-      "mode-mon-col": 3,
-      "on-scroll": 1,
-      "on-click-right": "mode",
-      "format": {
-        "months": "<span color='#ffead3'><b>{}</b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b>{}</b></span>"
-      }
-    },
-    "actions": {
-      "on-click-right": "mode",
-      "on-click-forward": "tz_up",
-      "on-click-backward": "tz_down",
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down"
-    }
-  },
-  "battery": {
-    "interval": 2,
-    "states": {
-      "good": 95,
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "<span color='#8ccf7e'>{icon}</span>   {capacity}%",
-    "format-charging": "<span color='#8ccf7e'></span>  {capacity}%",
-    "format-plugged": "<span color='#8ccf7e'></span>  {capacity}%",
-    "format-icons": ["", "", "", "", ""]
-  },
-  "bluetooth": {
-    "format-on": "<span color='#e57474'></span>  Turned On",
-    "format-off": "<span color='#e57474'></span>  Turned Off",
-    "format-disabled": "<span color='#e57474'></span>  Disabled",
-    "format-connected": "<span color='#e57474'></span> Connected",
-    "format": "<span color='#e57474'></span> Disabled",
-    "on-click": "blueberry &"
-  },
+
   "custom/power": {
     "format": "",
-    "on-click": "~/.config/rofi/powermenu/type-4/powermenu.sh"
-  },
-  "custom/notification": {
-    "format": "󱅫",
-    "on-click": "swaync-client -t -sw"
+    "tooltip": false,
+    "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
+    "on-click-right": "~/.config/waybar/scripts/ChangeBlur.sh"
   }
 }

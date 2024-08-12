@@ -1,6 +1,5 @@
 # dotfiles
 My [Hyprland](https://hyprland.org) and [waybar](https://github.com/Alexays/waybar) rice!
-
 ## screenshots
 ![screenshot](./assets/screenshot1.png)
 
