@@ -1,4 +1,10 @@
 {
+  "custom/menu": {
+    "format": "<span foreground='#89b4fa'></span>",
+    "tooltip": false,
+    "on-click": "$HOME/.config/rofi/applauncher.sh"
+  },
+
   "hyprland/workspaces": {
     "on-click": "activate",
     "active-only": false,
@@ -15,12 +21,6 @@
       "Obsidian - (.*)": "Obsidian",
       "(.*) - Google Chrome": "Chrome"
     }
-  },
-  
-  "custom/menu": {
-    "format": "<span foreground='#89b4fa'></span>",
-    "tooltip": false,
-    "on-click": "$HOME/.config/rofi/launchers/type-3/launcher.sh"
   },
 
   "custom/separator": {
@@ -123,7 +123,6 @@
   "custom/power": {
     "format": "",
     "tooltip": false,
-    "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
-    "on-click-right": "~/.config/waybar/scripts/ChangeBlur.sh"
+    "on-click": "wlogout"
   }
 }
