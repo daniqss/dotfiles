@@ -48,7 +48,7 @@
   },
 
   "tray": {
-    "icon-size": 18,
+    "icon-size": 16,
     "spacing": 3
   },
 
@@ -82,7 +82,8 @@
     "format": "{icon} {essid}",
     "format-disconnected": "<span foreground='#353231'>󰤭 </span>Disconnected",
     "format-alt": "{ifname}: {ipaddr}/{cidr}",
-    "on-click-right":"sleep 0.1 && bash ~/.config/rofi/rofi-wifi-menu.sh",
+    "on-click": "rofi-wifi-menu",
+    "on-click-right":"alacritty --hold --command nmtui",
     "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
     "tooltip-format-wifi": " {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
     "interval": 10
@@ -94,12 +95,13 @@
     "format-connected": "<span foreground='#89b4fa'></span> {device_alias}",
     "tooltip-format-enumerate-connected": " {device_alias} 󰂄{device_battery_percentage}%",
     "tooltip": true,
-    "on-click": "blueberry"
+    "on-click": "rofi-bluetooth",
+    "on-click-right": "blueberry"
   },
 
-  "wireplumber": {
+  "pulseaudio": {
     "on-click": "amixer sset Master toggle 1>/dev/null",
-    "on-click-right": "sleep 0.1 && pavucontrol",
+    "on-click-right": "rofi -show rofi-sound -modi 'rofi-sound:rofi-sound-output-chooser'",
     "format": "{icon}  {volume}%",
     "format-muted": " <span foreground='#A6E3A1'></span> Mute",
     "format-source": "",

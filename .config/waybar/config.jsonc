@@ -12,6 +12,8 @@
   "modules-left": ["custom/menu", "hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
   "modules-right": [
+    "tray",
+	"custom/separator",
     "custom/picker",
     "custom/clipboard",
     "custom/screenshot",
@@ -21,7 +23,6 @@
     "custom/separator", 
     "wireplumber",
     "custom/separator", 
-    "tray",
     "custom/power"
   ]
 }
