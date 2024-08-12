@@ -1,0 +1,133 @@
+* {
+	gruv0: #15171c;   
+	gruv1: #545454;   
+	gruv2: #545454;   
+	gruv3: #545454;   
+	gruv4: #ffffff;   
+	gruv5: #ffffff;   
+	gruv8: #545454;   
+	gruv9: #545454;   
+	gruv10: #15171c;  
+	red: #ff6973;     
+	orange: #ffd156;  
+	yellow: #ffd156;  
+	aqua: #83e8e4;    
+	purple: #ff55ff;  
+	reddark: #ff55ff;  
+	yellowdark: #ffd156; 
+
+	primary: #CAA6F7;
+	foreground: rgba(10, 10, 10, 0.6);
+	background-color:  rgba(10, 10, 10, 0);
+	highlight: underline bold #eeece7;
+	transparent: rgba(10,10,10,0.2);
+}
+
+window {
+    location: center;
+    anchor:   center;
+    height: 460px;
+    width: 500px;
+
+    background-color: @transparent;
+    spacing: 0;
+    children:  [mainbox];
+    orientation: horizontal;
+}
+
+mainbox {
+    border-radius: 0px;
+    spacing: 0;
+    children: [ inputbar, message, listview ];
+}
+
+message {
+    padding: 10px;
+    border:  0px 2px 2px 2px;
+    border-color: @gruv0;
+    background-color: @transparent;
+}
+
+inputbar {
+    color: @primary;
+    padding: 14px;
+    background-color: @transparent;
+    border-color: @primary;
+
+    border: 4px;
+    border-radius: 0px;
+}
+
+entry, prompt, case-indicator {
+    text-font: inherit;
+    text-color: inherit;
+}
+
+prompt {
+    margin: 0px 1em 0em 0em ;
+}
+
+listview {
+    padding: 8px;
+    border-radius: 0px;
+    border: 0px 4px 4px 4px;
+    border-color: @primary;
+    background-color: @transparent;
+    dynamic: false;
+}
+
+element {
+    padding: 5px;
+    vertical-align: 0.5;
+    border-radius: 5px;
+    color: @foreground;
+    text-color: #F8FAFC;
+    background-color: @transparent;
+}
+
+element.normal.active {
+    background-color: @yellow;
+}
+
+element.normal.urgent {
+    background-color: @reddark;
+}
+
+element.selected.normal {
+    background-color: @foreground;
+    text-color: #F8FAFC;
+}
+
+element.selected.active {
+    background-color: @yellowdark;
+}
+
+element.selected.urgent {
+    background-color: @red;
+}
+
+element.alternate.normal {
+    background-color: @transparent;
+}
+
+element-text, element-icon {
+    size: 3ch;
+    margin: 0 10 0 0;
+    vertical-align: 0.5;
+    text-color: #F8FAFC;
+}
+
+button {
+    padding: 6px;
+    color: @foreground;
+    horizontal-align: 0.5;
+
+    border: 2px 0px 2px 2px;
+    border-radius: 5px;
+    border-color: @foreground;
+}
+
+button.selected.normal {
+    border: 2px 0px 2px 2px;
+    border-color: @foreground;
+}
