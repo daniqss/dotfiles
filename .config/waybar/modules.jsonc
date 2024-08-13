@@ -70,6 +70,14 @@
     "on-click": "hyprshot -m region"
   },
 
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "US",
+    "format-es": "ES",
+    "keyboard-name": "hfd.cn-ek68",
+    "on-click": "~/.config/scripts/change_layout.sh"
+  },
+
   "network": {
     "format-icons": [
       "<span foreground='#EA6962'>󰤟 {ipaddr}</span>",

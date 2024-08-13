@@ -67,6 +67,7 @@ label {
 #custom-picker,
 #custom-clipboard,
 #custom-screenshot,
+#language,
 #temperature,
 #bluetooth,
 #pulseaudio,
@@ -165,6 +166,11 @@ label {
   color: #94e2d5;
   font-family: "Firacode Nerd Font Mono";
   font-size: 18px;
+}
+
+#language {
+  color: #E583A0;
+  padding: 4px 1px 0px 3px;
 }
 
 /* POWER */
