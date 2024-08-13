@@ -17,12 +17,7 @@ main() {
     # Install packages
     install_pacman_packages
     install_yay_packages
-
-    read -p "Do you want to install Nvidia packages? (y/n): " nvidia
-    nvidia="${nvidia,,}"
-    if [[ "$nvidia" =~ ^(yes|y)$ ]]; then
-        install_nvidia_packages
-    fi
+    install_cargo_packages
 
     echo "All packages installed successfully!"
 }
@@ -39,23 +34,13 @@ install_yay_packages() {
     yay -S --noconfirm "${yay_packages[@]}"
 }
 
-# Function to install Nvidia packages
-install_nvidia_packages() {
-    echo "Installing Nvidia packages..."
-    sudo pacman -S --noconfirm "${nvidia_packages[@]}"
+install_cargo_packages() {
+    echo "Installing cargo packages..."
+    cargo install "${cargo_packages[@]}"
 }
 
 # Define pacman packages
 pacman_packages=(
-    # Essentials
-    base-devel
-    linux-headers
-    linux-firmware
-    pacman-contrib
-    meson
-    ninja
-    cmake
-    
     # Hyprland
     hyprland
     xdg-desktop-portal-hyprland
@@ -63,7 +48,7 @@ pacman_packages=(
     hyprcursor
     
     # Terminal
-    kitty
+    alacritty
     zsh
     starship
     neovim
@@ -90,15 +75,22 @@ pacman_packages=(
     bluez-utils
     blueberry
     nwg-look
+    wl-clipboard
+    cliphist
     
     # Apps
-    wofi
-    dunst
+    rofi-wayland
+    rofimoji
+    rofi-bluetooth
+    mako
     waybar
+    wlogout
     obsidian
-    thunar
+    nautilus
+    eog
     steam
     discord
+    spotify-launcher
     
     # Development
     nodejs
@@ -112,6 +104,8 @@ pacman_packages=(
     # miscelaneous
     brigthnessctl
     playerctl
+    jq
+
 
     #sddm theme
     sddm
@@ -122,15 +116,13 @@ pacman_packages=(
 
 # Define yay packages
 yay_packages=(
-	# hyprland
-    # yay -S --mflags '--nocheck' hyprswitch
     hyprpicker
     hyprlock
     hypridle
+    hyprshade
 	swww
 
     # Apps
-    spotify
     xpadneo-dkms
 
     # Fonts
@@ -155,15 +147,10 @@ yay_packages=(
     tela-circle-icon-theme-all
 )
 
-# Define Nvidia packages
-nvidia_packages=(
-    nvidia
-    nvidia-utils
-    nvidia-dkms
-    egl-wayland
-    lib32-nvidia-utils
-    nvidia-settings
-    opencl-nvidia
+cargo_packages=(
+    hyprqtile
+    pokeget
+    lizzy
 )
 
 main
