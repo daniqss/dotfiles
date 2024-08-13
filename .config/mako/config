@@ -1,0 +1,9 @@
+font=FiraCode Nerd Font Ret 10
+background-color=#0a0a0a99
+padding=10
+border-size=2
+border-color=#C6A7F7FF
+margin=28
+border-radius=10
+max-icon-size=52
+default-timeout=5000

@@ -55,7 +55,7 @@
   "custom/clipboard": {
     "format": "󰨸",
     "tooltip": false,
-    "on-click": ""
+    "on-click": "rofi -modi clipboard:'rofi-cliphist' -show clipboard"
   },
 
   "custom/picker": {
@@ -81,7 +81,6 @@
     "format-linked": "{ifname} (No IP) ",
     "format": "{icon} {essid}",
     "format-disconnected": "<span foreground='#353231'>󰤭 </span>Disconnected",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}",
     "on-click": "rofi-wifi-menu",
     "on-click-right":"alacritty --hold --command nmtui",
     "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
@@ -99,11 +98,11 @@
     "on-click-right": "blueberry"
   },
 
-  "pulseaudio": {
-    "on-click": "amixer sset Master toggle 1>/dev/null",
-    "on-click-right": "rofi -show rofi-sound -modi 'rofi-sound:rofi-sound-output-chooser'",
+  "wireplumber": {
+    "on-click": "rofi -show rofi-sound -modi 'rofi-sound:rofi-sound-output-chooser'",
+    "on-click-right": "amixer sset Master toggle 1>/dev/null",
     "format": "{icon}  {volume}%",
-    "format-muted": " <span foreground='#A6E3A1'></span> Mute",
+    "format-muted": "<span foreground='#A6E3A1'></span> Mute",
     "format-source": "",
     "format-source-muted": " ",
     "format-icons": {
