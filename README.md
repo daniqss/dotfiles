@@ -56,6 +56,7 @@ cd dotfiles
 > [!WARNING]  
 > The script will remove all the config folders that may conflict with the dotfiles.
 > Make sure to backup your files before running the script.
+> Also, it's unupdated, jeje💀💀
 
 ### sddm theme
 ```bash
