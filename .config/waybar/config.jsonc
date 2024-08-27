@@ -9,11 +9,11 @@
   "ipc": true,
   "height": 36,
 
-  "modules-left": ["custom/menu", "hyprland/workspaces", "hyprland/window"],
+  "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
     "tray",
-	"custom/separator",
+    "custom/separator",
     "custom/picker",
     "custom/clipboard",
     "custom/screenshot",

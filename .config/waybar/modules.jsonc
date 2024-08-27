@@ -85,7 +85,7 @@
       "<span foreground='#89B482'>󰤥 {ipaddr}</span>",
       "<span foreground='#7DAEA3'>󰤨 {ipaddr}</span>"
     ],
-    "format-ethernet": "<span foreground='#FFFACD'>󰈀 </span>{ipaddr}",
+    "format-ethernet": "<span foreground='#FFFACD'>󰈀 </span>",
     "format-linked": "{ifname} (No IP) ",
     "format": "{icon} {essid}",
     "format-disconnected": "<span foreground='#353231'>󰤭 </span>Disconnected",

@@ -1,5 +1,6 @@
 configuration {
     show-icons: true;
+    drun-icon-theme: "Windows 10";
     font: "JetBrainsMono 10";
 
     display-run:    "󱓞 run:";

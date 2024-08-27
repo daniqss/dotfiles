@@ -1,18 +1,42 @@
 {
-    // Theming
-    "window.titleBarStyle" : "custom",
-    "workbench.colorTheme": "One Dark Darker",
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Courier New', monospace",
-    "editor.fontLigatures": true,
-    "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', monospace",
-    "terminal.integrated.fontSize": 16,
-    "editor.fontSize": 16,
-    "editor.stickyScroll.enabled": false,
-    "github.copilot.enable": {
-        "*": true,
-        "plaintext": false,
-        "markdown": true,
-        "scminput": false
-    },
+  // Theming
+  "window.titleBarStyle": "custom",
+  "workbench.colorTheme": "One Dark Darker",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', monospace",
+  "terminal.integrated.fontSize": 16,
+  "editor.fontSize": 16,
+  "editor.stickyScroll.enabled": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+    "typescript": true
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  // rust analyzer hide hints
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
+  "rust-analyzer.inlayHints.chainingHints.enable": false
 }
