@@ -43,8 +43,8 @@ mainbox {
 
 message {
     padding: 10px;
-    border:  0px 2px 2px 2px;
-    border-color: @gruv0;
+    border:  0px 4px 2px 4px;
+    border-color: @primary;
     background-color: @transparent;
 }
 
@@ -70,7 +70,7 @@ prompt {
 listview {
     padding: 8px;
     border-radius: 0px;
-    border: 0px 4px 4px 4px;
+    border: 2px 4px 4px 4px;
     border-color: @primary;
     background-color: @transparent;
     dynamic: false;

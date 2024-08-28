@@ -132,6 +132,6 @@
   "custom/power": {
     "format": "",
     "tooltip": false,
-    "on-click": "wlogout"
+    "on-click": "$HOME/.config/rofi/powermenu.sh"
   }
 }
