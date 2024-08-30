@@ -52,6 +52,6 @@ wall_selection=$(find "${wall_dir}"  -maxdepth 1  -type f \( -iname "*.jpg" -o -
 
 # Set the wallpaper
 [[ -n "$wall_selection" ]] || exit 1
-swww img ${wall_dir}/${wall_selection}
+swww img -t grow ${wall_dir}/${wall_selection}
 
 exit 0
