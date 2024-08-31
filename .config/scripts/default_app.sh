@@ -10,7 +10,7 @@ case $workspace_id in
     3) alacritty & disown ;;
     4) obsidian & disown ;;
     5) nautilus & disown ;;
-    6) ~/.config/scripts/wofi.sh & disown ;;
+    6) discord & disown ;;
     7) steam & disown ;;
     8) spotify-launcher & disown ;;
     9) google-chrome-stable & disown ;;

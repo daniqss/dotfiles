@@ -105,6 +105,7 @@ pacman_packages=(
     brigthnessctl
     playerctl
     jq
+    imagemagick
 
 
     #sddm theme
@@ -119,6 +120,7 @@ yay_packages=(
     hyprpicker
     hyprlock
     hypridle
+    hyprshot
     hyprshade
 	swww
 
