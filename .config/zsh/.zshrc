@@ -83,7 +83,7 @@ alias gits='git status'
 alias gita='git add'
 alias gitc='git commit -m'
 alias gitca='git commit -am'
-alias gitkey='cat $GITHUB_KEY_PATH | wl-copy'
+alias gitkey='cat $HOME/Dropbox/keys/github_key.md | wl-copy'
 
 # alias dotfiles='/usr/bin/git --git-dir=$HOME/git-bare/dotfiles/ --work-tree=$HOME/.config'
 # alias FIC='/usr/bin/git --git-dir=$HOME/git-bare/FIC --work-tree=$HOME/Dropbox/Obsidian/FIC'
