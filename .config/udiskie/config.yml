@@ -1,0 +1,7 @@
+icon_names: [
+            'drive-removable-media-usb-pendrive',
+            'drive-removable-media-usb',
+            'drive-removable-media',
+            'media-optical',
+            'media-flash',
+]

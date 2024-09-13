@@ -23,7 +23,9 @@
     "bluetooth",
     "custom/separator", 
     "wireplumber",
-    "custom/separator", 
+    "custom/separator",
+    "battery", 
+    "custom/separator",
     "custom/power"
   ]
 }

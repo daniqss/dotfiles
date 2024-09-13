@@ -74,16 +74,16 @@
     "format": "{}",
     "format-en": "US",
     "format-es": "ES",
-    "keyboard-name": "hfd.cn-ek68",
+    "keyboard-name": "at-translated-set-2-keyboard",
     "on-click": "~/.config/scripts/change_layout.sh"
   },
 
   "network": {
     "format-icons": [
-      "<span foreground='#EA6962'>󰤟 {ipaddr}</span>",
-      "<span foreground='#D3869B'>󰤢 {ipaddr}</span>",
-      "<span foreground='#89B482'>󰤥 {ipaddr}</span>",
-      "<span foreground='#7DAEA3'>󰤨 {ipaddr}</span>"
+      "<span foreground='#FFFACD'>󰤟 </span>",
+      "<span foreground='#FFFACD'>󰤢 </span>",
+      "<span foreground='#FFFACD'>󰤥 </span>",
+      "<span foreground='#FFFACD'>󰤨 </span>"
     ],
     "format-ethernet": "<span foreground='#FFFACD'>󰈀 </span>",
     "format-linked": "{ifname} (No IP) ",
@@ -127,6 +127,37 @@
           "<span foreground='#A6E3A1'></span>"
         ]
     }
+  },
+
+  "battery": {
+    "interval": 60,
+    "align": 0,
+    "rotate": 0,
+    //"bat": "BAT1",
+    //"adapter": "ACAD",
+    "full-at": 100,
+    "design-capacity": false,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "<span foreground='#E4BA84'></span> {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-full": "{icon} Full",
+    //"format-good": "",
+    "format-alt": "{icon} {time}",
+    "format-icons": [
+      "<span foreground='#FF0000'> </span>",
+      "<span foreground='#E4BA84'> </span>",
+      "<span foreground='#E4BA84'> </span>",
+      "<span foreground='#E4BA84'> </span>",
+      "<span foreground='#E4BA84'> </span>"
+    ],
+    "format-time": "{H}h {M}min",
+    "tooltip": true,
+    "on-click": "alacritty --command btm"
   },
 
   "custom/power": {

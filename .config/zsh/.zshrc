@@ -15,8 +15,7 @@ compinit
 # End of lines added by compinstall
 
 export PATH="$HOME/.cargo/bin/:$HOME/.config/scripts:$PATH"
-export JAVA_HOME=/opt/jdk-20.0.2
-export PATH=$JAVA_HOME/bin:$PATH
+export PATH="/usr/local/mysql/bin:$PATH"
 
 bindkey "^[[3~" delete-char
 bindkey "^[[1;5C" forward-word
@@ -42,6 +41,9 @@ alias cat='bat --paging=never'
 alias catp='bat --paging=never --plain'
 alias icat='kitten icat'
 alias cls='clear'
+alias mysql='mariadb'
+alias mysqladmin='mariadb-admin'
+
 alias pSyu='sudo pacman -Syu'
 alias pS='sudo pacman -S'
 alias pR='sudo pacman -R'
