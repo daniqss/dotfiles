@@ -41,6 +41,10 @@ alias cat='bat --paging=never'
 alias catp='bat --paging=never --plain'
 alias icat='kitten icat'
 alias cls='clear'
+code() {
+	command code "$@" > /dev/null 2>&1
+}
+alias lsi='TERM=xterm-256color ssh lsi@10.11.48.180'
 alias mysql='mariadb'
 alias mysqladmin='mariadb-admin'
 
@@ -55,7 +59,7 @@ alias gits='git status'
 alias gita='git add'
 alias gitc='git commit -m'
 alias gitca='git commit -am'
-alias gitkey='cat $GITHUB_KEY_PATH | wl-copy'
+alias gitkey='cat $HOME/Dropbox/keys/github_key.md | wl-copy'
 
 # alias dotfiles='/usr/bin/git --git-dir=$HOME/git-bare/dotfiles/ --work-tree=$HOME/.config'
 # alias FIC='/usr/bin/git --git-dir=$HOME/git-bare/FIC --work-tree=$HOME/Dropbox/Obsidian/FIC'

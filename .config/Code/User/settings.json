@@ -33,10 +33,20 @@
     "editor.formatOnSave": true
   },
 
+
   // rust analyzer hide hints
   "rust-analyzer.inlayHints.parameterHints.enable": false,
   "rust-analyzer.inlayHints.typeHints.enable": false,
   "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
   "rust-analyzer.inlayHints.chainingHints.enable": false,
-  "workbench.colorTheme": "One Dark Darker"
+  "workbench.colorTheme": "One Dark Darker",
+  "redhat.telemetry.enabled": false,
+
+  // Editor
+  "editor.mouseWheelZoom": true,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.jpeg": "imagePreview.previewEditor"
+  }
 }
