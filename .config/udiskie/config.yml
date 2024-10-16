@@ -1,3 +1,4 @@
+tray: auto
 icon_names: [
             'drive-removable-media-usb-pendrive',
             'drive-removable-media-usb',
