@@ -14,6 +14,38 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# transcient prompt
+zle-line-init() {
+   emulate -L zsh
+
+   [[ $CONTEXT == start ]] || return 0
+
+   while true; do
+     zle .recursive-edit
+     local -i ret=$?
+     [[ $ret == 0 && $KEYS == $'\4' ]] || break
+     [[ -o ignore_eof ]] || exit 0
+   done
+
+   local saved_prompt=$PROMPT
+   local saved_rprompt=$RPROMPT
+   print -r -- ""
+   PROMPT='$(starship module character)'
+   RPROMPT=''
+   zle .reset-prompt
+   PROMPT=$saved_prompt
+   RPROMPT=$saved_rprompt
+
+   if (( ret )); then
+     zle .send-break
+   else
+     zle .accept-line
+   fi
+   return ret
+ }
+
+zle -N zle-line-init
+
 export PATH="$HOME/.cargo/bin/:$HOME/.config/scripts:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 
@@ -45,6 +77,9 @@ alias icat='kitten icat'
 alias cls='clear'
 code() {
 	command code "$@" > /dev/null 2>&1
+}
+intellij() {
+	command idea.sh "$@" > /dev/null 2>&1 & disown
 }
 alias lsi='TERM=xterm-256color ssh lsi@10.11.48.180'
 alias mysql='mariadb'

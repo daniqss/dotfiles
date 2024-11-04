@@ -30,7 +30,6 @@
 
 [cursor]
   blink_interval = 5
-  style = 'Beam'
   thickness = 0.2
   unfocused_hollow = true
 
@@ -59,9 +58,6 @@
   y = 0
 
 [window]
-  opacity = 0.75
-  
-
-[window.padding]
-  x = 15
-  y = 5
+  padding = { x = 5, y = 5 }
+  opacity = 0.88
+  dynamic_title = true

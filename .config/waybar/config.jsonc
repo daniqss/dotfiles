@@ -1,31 +1,175 @@
 {
-  "include": "~/.config/waybar/modules.jsonc",
   "layer": "top",
-  "exclusive": true,
-  "passthrough": false,
   "position": "top",
-  "spacing": 3,
-  "fixed-center": true,
-  "ipc": true,
-  "height": 36,
-
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["clock"],
+  "spacing": 0,
+  "height": 34,
+  "margin-top": 5,
+  "margin-left": 12,
+  "margin-right": 12,
+  "margin-bottom": -5,
+  "modules-left": [
+      "hyprland/workspaces",
+      "hyprland/window"
+  ],
+  "modules-center": [],
   "modules-right": [
     "tray",
-    "custom/separator",
-    "custom/picker",
-    "custom/clipboard",
-    "custom/screenshot",
-    "hyprland/language",
-    "custom/separator",
+    "custom/updates",
     "network",
     "bluetooth",
-    "custom/separator", 
+    "battery",
     "wireplumber",
-    "custom/separator",
-    "battery", 
-    "custom/separator",
+    "clock",
     "custom/power"
-  ]
+  ],
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 40,
+    "separate-outputs": true,
+    "rewrite": {
+      "(.*) Visual Studio Code": "code",
+      "(.*) Chromium": "chromium",
+      "(.*) — Mozilla Firefox": "firefox",
+      "Alacritty": "alacritty",
+      "(.*) - Obsidian - (.*)": "obsidian",
+      "Spotify Premium": "spotify",
+      "(.*) - Google Chrome": "chrome"
+    }
+  },
+
+  "hyprland/workspaces": {
+      "on-click": "activate",
+      "format": "{name}",
+      "persistent-workspaces": {
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "5": [],
+          "6": [],
+          "7": [],
+          "8": [],
+          "9": []
+      }
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 3
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "{:%d-%m-%y %H:%M}",
+    "format-alt": "   {:%H:%M     %Y, %d %B, %A} ",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "days": "<span color='#ebdbb2'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ebdbb2'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+
+  "network": {
+    "format-icons": [
+      "󰤟 ",
+      "󰤢 ",
+      "󰤥 ",
+      "󰤨 "
+    ],
+    "format-ethernet": "󰈀 ",
+    "format-linked": "{ifname} (No IP) ",
+    "format": "{icon}",
+    "format-disconnected": "󰤭 ",
+    "on-click": "rofi-wifi-menu",
+    "on-click-right":"alacritty --hold --command nmtui",
+    "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
+    "tooltip-format-wifi": " {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
+    "interval": 10
+  },
+
+  "bluetooth": {
+    "format": " ",
+    "format-disabled": "󰂳",
+    "format-connected": " ",
+    "tooltip-format": " {device_alias} 󰂄{device_battery_percentage}%",
+    "tooltip-format-enumerate-connected": " {device_alias} 󰂄{device_battery_percentage}%",
+    "tooltip": true,
+    "on-click": "rofi-bluetooth",
+    "on-click-right": "blueberry"
+  },
+
+  "wireplumber": {
+    "on-click": "rofi -show rofi-sound -modi 'rofi-sound:rofi-sound-output-chooser'",
+    "on-click-right": "amixer sset Master toggle 1>/dev/null",
+    "format": "{icon}{volume}",
+    "tooltip-format": "{icon} {volume}%",
+    "format-source": "",
+    "format-source-muted": " ",
+    "format-icons": {
+        "default": [
+          " ",
+          " ", 
+          " ",
+          "  3"
+        ]
+    }
+  },
+
+  "battery": {
+      "format": "{icon}",
+      "format-icons": {
+          "charging": [
+              "󰢜",
+              "󰂆",
+              "󰂇",
+              "󰂈",
+              "󰢝",
+              "󰂉",
+              "󰢞",
+              "󰂊",
+              "󰂋",
+              "󰂅"
+          ],
+          "default": [
+              "󰁺",
+              "󰁻",
+              "󰁼",
+              "󰁽",
+              "󰁾",
+              "󰁿",
+              "󰂀",
+              "󰂁",
+              "󰂂",
+              "󰁹"
+          ]
+      },
+      "interval": 5,
+      "states": {
+          "warning": 20,
+          "critical": 10
+      },
+      "tooltip": true
+    },
+
+  "custom/power": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "$HOME/.config/rofi/powermenu.sh"
+  },
+
+  "custom/updates": {
+      "format": " {}",
+      "exec": "checkupdates | wc -l",
+      "interval": 60,
+      "tooltip": false
+  }
 }

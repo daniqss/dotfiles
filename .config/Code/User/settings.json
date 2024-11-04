@@ -10,10 +10,11 @@
   "editor.stickyScroll.enabled": false,
   "github.copilot.enable": {
     "*": true,
-    "plaintext": false,
+    "plaintext": true,
     "markdown": true,
     "scminput": false,
-    "typescript": true
+    "typescript": true,
+    "rust": false
   },
 
   "[javascript]": {
@@ -32,14 +33,19 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true
+  },
 
   // rust analyzer hide hints
+  "rust-analyzer.inlayHints.closingBraceHints.enable": false,
   "rust-analyzer.inlayHints.parameterHints.enable": false,
   "rust-analyzer.inlayHints.typeHints.enable": false,
   "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
   "rust-analyzer.inlayHints.chainingHints.enable": false,
-  "workbench.colorTheme": "One Dark Darker",
+  "rust-analyzer.checkOnSave": true,
+  "workbench.colorTheme": "Darker than One Dark Pro (Dark Editor)",
   "redhat.telemetry.enabled": false,
 
   // Editor
@@ -48,5 +54,8 @@
   "workbench.editorAssociations": {
     "*.copilotmd": "vscode.markdown.preview.editor",
     "*.jpeg": "imagePreview.previewEditor"
-  }
+  },
+  "git.autofetch": true,
+  "makefile.configureOnOpen": true,
+  "rust-analyzer.diagnostics.styleLints.enable": true
 }

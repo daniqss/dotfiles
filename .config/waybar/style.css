@@ -1,182 +1,134 @@
-@define-color primary #f8fafc;
-
 * {
   font-family: "Firacode Nerd Font";
   font-weight: bold;
   font-size: 100%;
 }
 
-
 window#waybar {
-  background-color: rgba(10, 10, 10, 0.6);
-  transition-property: background-color;
-  transition-duration: 0.5s;;
+  background-color: #1B1A1E;
+  margin: 6px;
+  padding: 0 4px;
+  border-radius: 5px;
 }
 
 window#waybar.hidden {
   opacity: 0.5;
-
 }
 
-window#waybar.empty #window {
-  border: 0px;
-  background-color: transparent;  
-}
-
-
-.modules-right {  
-  border: 0px solid #b4befe;
-  border-radius: 10px;
-}
-
-.modules-center { 
-  border: 0px solid #b4befe; 
-  border-radius: 10px; 
-} 
-
-.modules-left { 
-  border-radius: 10px; 
-} 
-
-tooltip {
-  opacity: 1;
-  border-radius: 10px;
-}
-
-tooltip label {
-  padding: 10px;
-  color: @primary;
-}
-
-label {
-  color: @primary;
-  margin: 0px;
-  padding: 3px;
-  border-radius: 0px;
-  border-bottom: 2px solid rgba(235, 219, 178, 0);
-}
-
-/* MODULES */
-
-
-/* COMMON */
-#custom-menu,
-#workspaces button,
-#window,
-#clock,
-#custom-picker,
-#custom-clipboard,
-#custom-screenshot,
-#language,
-#temperature,
-#bluetooth,
-#pulseaudio,
-#wireplumber,
-#network,
-#battery,
-#memory,
-#cpu,
-#disk,
-#custom-power {
-  padding: 3px 3px 0px 3px;
-}
-
-
-/* WORKSPACES */
 #workspaces {
-  font-weight: bold;
-  margin-left: 6px;
+  background-color: #1B1A1E;
+  margin: 0 2px 0 2px;
+  padding: 2px;
+  border-radius: 5px;
 }
 
 #workspaces button {
-  color: @primary;
-  margin: 0px;
-  border-radius: 0px;
-  border-bottom: 2px solid rgba(235, 219, 178, 0);
+  all: initial;
+  min-width: 0;
+  box-shadow: inset 0 -3px transparent;
+  padding: 4px 10px;
+  margin: 2px;
+  color: #ffffff;
+  border-radius: 5px;
 }
 
-#workspaces button.visible {
-  border-radius: 0px;
-  border-bottom: 2px solid #89b4fa;
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: #1B1A1E;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 1px #3A3A3C;
+  border-radius: 5px;
 }
 
 #workspaces button.active {
-  border-radius: 0px;
-  border-bottom: 2px solid #cba6f7;
+  color: #1B1A1E;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 1px #3A3A3C;
+  border-radius: 5px;
 }
 
-/* WINDOW */
-#window {
-  margin: 0px 8px 0px 14px;
-  padding: 3px 3px 0px 3px;
+#workspaces button.urgent {
+  background-color: #f38ba8;
+  color: #1B1A1E;
+  box-shadow: 0 0 0 1px #3A3A3C;
+  border-radius: 5px;
 }
 
-/* MENU */
-#custom-menu {
-  font-family: "Firacode Nerd Font Mono";
-  font-size: 24px;
-  margin: 4px 4px 2px 6px;
-  color: #89b4fa;
-  padding: 1px 4px 1px 8px;
+#custom-updates {
+  margin: 0 2px 0 4px;
+  padding: 6px 12px;
+  background-color: #1B1A1E;
+  color: #ffffff;
+  border-radius: 5px;
 }
 
-/* SEPARATOR */
-#custom-separator {
-  font-size: 16px;
-  margin: 1px 2px 1px 2px;
-  padding: 3px 3px 0px 3px;
+#battery {
+  margin: 0 2px 0 2px;
+  padding: 0 12px 0 0px;
+  background-color: #1B1A1E;
+  color: #ffffff;
+  border-radius: 5px;
 }
 
-/* CLOCK */
+
+#wireplumber {
+  margin: 0 12px 0 4px;
+  background-color: #1B1A1E;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+#network {
+  margin: 0 2px 0 4px;
+  background-color: #1B1A1E;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
 #clock {
-  margin: 4px 6px 2px 6px;
+  margin: 0 2px 0 4px;
+  background-color: #1B1A1E;
+  color: #ffffff;
+  border-radius: 5px;
 }
 
-/* TRAY */
-#tray{
-  padding: 3px 3px 2px 3px;
+#tray {
+  margin: 0 2px 0 4px;
+  background-color: #1B1A1E;
+  color: #ffffff;
+  border-radius: 5px;
 }
 
-#tray > .passive {
-  -gtk-icon-effect: dim;
-}
- 
-#tray > .needs-attention {
-  -gtk-icon-effect: highlight;
-  background-color: #eb4d4b;
-}
-
-#network { 
-  padding: 3px 7px 0px 3px;
+#window {
+  margin: 0 2px 0 4px;
+  padding: 6px 12px;
+  background-color: #1B1A1E;
+  color: #ffffff;
+  border-radius: 5px;
 }
 
-#custom-picker {
-  color: #cba6f7;
-  font-family: "Firacode Nerd Font Mono";
-  font-size: 18px;
-}
-
-#custom-clipboard {
-  color: #89b4fa;
-  font-family: "Firacode Nerd Font Mono";
-  font-size: 18px;
-}
-
-#custom-screenshot {
-  color: #94e2d5;
-  font-family: "Firacode Nerd Font Mono";
-  font-size: 18px;
-}
-
-#language {
-  color: #E583A0;
-}
-
-/* POWER */
 #custom-power {
-  font-family: "Firacode Nerd Font Mono";
-  color: #ff6347;
-  margin: 4px 6px 2px 2px;
-  font-size: 22px;
-  padding: 1px 8px 1px 4px;
+  margin: 0 0 0 4px;
+  padding: 6px 16px 6px 12px;
+  background-color: #1B1A1E;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+#battery.warning,
+#battery.critical,
+#battery.urgent,
+#battery.charging {
+  background-color: #1B1A1E;
+  color: #ffffff;
+}
+
+tooltip {
+  background-color: #1B1A1E;
+}
+
+tooltip label {
+  padding: 4px;
+  color: #ffffff;
 }
