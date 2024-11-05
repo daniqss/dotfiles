@@ -45,7 +45,7 @@
   "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
   "rust-analyzer.inlayHints.chainingHints.enable": false,
   "rust-analyzer.checkOnSave": true,
-  "workbench.colorTheme": "Darker than One Dark Pro (Dark Editor)",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "redhat.telemetry.enabled": false,
 
   // Editor

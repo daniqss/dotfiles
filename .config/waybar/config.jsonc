@@ -4,22 +4,25 @@
   "spacing": 0,
   "height": 34,
   "margin-top": 5,
-  "margin-left": 12,
-  "margin-right": 12,
+  "margin-left": 14,
+  "margin-right": 14,
   "margin-bottom": -5,
   "modules-left": [
       "hyprland/workspaces",
       "hyprland/window"
   ],
-  "modules-center": [],
+  "modules-center": [
+    "clock"
+  ],
   "modules-right": [
     "tray",
     "custom/updates",
+    // "cpu",
+    // "memory",
     "network",
     "bluetooth",
     "battery",
     "wireplumber",
-    "clock",
     "custom/power"
   ],
 
@@ -123,6 +126,21 @@
           "  "
         ]
     }
+  },
+
+  "cpu": {
+    "format": "󰍛 {usage}%",
+    "interval": 1,
+    "on-click": "gnome-system-monitor"
+  },
+
+  "memory": {
+    "interval": 10,
+    "format": " {used:0.1f}G",
+    "format-alt-click": "click",
+    "tooltip": true,
+    "tooltip-format": "{used:0.1f}GB/{total:0.1f}G",
+    "on-click": "gnome-system-monitor"
   },
 
   "battery": {

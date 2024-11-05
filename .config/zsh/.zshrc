@@ -76,10 +76,10 @@ alias catp='bat --paging=never --plain'
 alias icat='kitten icat'
 alias cls='clear'
 code() {
-	command code "$@" > /dev/null 2>&1
+	/usr/bin/code "$@" > /dev/null 2>&1
 }
 intellij() {
-	command idea.sh "$@" > /dev/null 2>&1 & disown
+	/opt/intellij-idea-ultimate-edition/bin/idea.sh "$@" > /dev/null 2>&1 & disown
 }
 alias lsi='TERM=xterm-256color ssh lsi@10.11.48.180'
 alias mysql='mariadb'

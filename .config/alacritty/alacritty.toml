@@ -1,6 +1,6 @@
 # Alacritty Colors
-
-# Normal colors
+general.import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+# # Normal colors
 [colors.normal]
   black = '#15171c'     # color0
   red = '#ec5f67'       # color1
@@ -12,17 +12,17 @@
   white = '#eeece7'     # color7
 
 # Bright colors
-[colors.bright]
-  black = '#545454'     # color8
-  red = '#ff6973'       # color9
-  green = '#93d393'     # color10
-  yellow = '#ffd156'    # color11
-  blue = '#4d83d0'      # color12
-  magenta = '#ff55ff'   # color13
-  cyan = '#83e8e4'      # color14
-  white = '#ffffff'     # color15
+# [colors.bright]
+#   black = '#545454'     # color8
+#   red = '#ff6973'       # color9
+#   green = '#93d393'     # color10
+#   yellow = '#ffd156'    # color11
+#   blue = '#4d83d0'      # color12
+#   magenta = '#ff55ff'   # color13
+#   cyan = '#83e8e4'      # color14
+#   white = '#ffffff'     # color15
 
-# Primary colors
+# # Primary colors
 [colors.primary]
   # background = '#212121'            # background
   background = '#111111'
