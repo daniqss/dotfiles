@@ -111,6 +111,7 @@
     "on-click": "rofi -show rofi-sound -modi 'rofi-sound:rofi-sound-output-chooser'",
     "on-click-right": "amixer sset Master toggle 1>/dev/null",
     "format": "{icon}{volume}",
+    "format-muted": "󰝟 {volume}",
     "tooltip-format": "{icon} {volume}%",
     "format-source": "",
     "format-source-muted": " ",
@@ -119,7 +120,7 @@
           " ",
           " ", 
           " ",
-          "  3"
+          "  "
         ]
     }
   },

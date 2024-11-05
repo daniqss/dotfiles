@@ -58,6 +58,6 @@
   y = 0
 
 [window]
-  padding = { x = 5, y = 5 }
+  padding = { x = 12, y = 5 }
   opacity = 0.88
   dynamic_title = true
