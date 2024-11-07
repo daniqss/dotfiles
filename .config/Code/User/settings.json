@@ -14,7 +14,7 @@
     "markdown": true,
     "scminput": false,
     "typescript": true,
-    "rust": false
+    "rust": true
   },
 
   "[javascript]": {
@@ -45,7 +45,7 @@
   "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
   "rust-analyzer.inlayHints.chainingHints.enable": false,
   "rust-analyzer.checkOnSave": true,
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.colorTheme": "Darker than One Dark Pro",
   "redhat.telemetry.enabled": false,
 
   // Editor
@@ -57,5 +57,6 @@
   },
   "git.autofetch": true,
   "makefile.configureOnOpen": true,
-  "rust-analyzer.diagnostics.styleLints.enable": true
+  "rust-analyzer.diagnostics.styleLints.enable": true,
+  "workbench.startupEditor": "none"
 }
