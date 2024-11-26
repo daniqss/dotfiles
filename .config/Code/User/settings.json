@@ -37,6 +37,10 @@
     "editor.defaultFormatter": "rust-lang.rust-analyzer",
     "editor.formatOnSave": true
   },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
 
   // rust analyzer hide hints
   "rust-analyzer.inlayHints.closingBraceHints.enable": false,
@@ -45,7 +49,7 @@
   "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
   "rust-analyzer.inlayHints.chainingHints.enable": false,
   "rust-analyzer.checkOnSave": true,
-  "workbench.colorTheme": "Darker than One Dark Pro",
+  "workbench.colorTheme": "One Dark Darker",
   "redhat.telemetry.enabled": false,
 
   // Editor
@@ -58,5 +62,7 @@
   "git.autofetch": true,
   "makefile.configureOnOpen": true,
   "rust-analyzer.diagnostics.styleLints.enable": true,
-  "workbench.startupEditor": "none"
+  "rust-analyzer.cargo.features": ["tests"], 
+  "workbench.startupEditor": "none",
+  "workbench.editor.empty.hint": "hidden"
 }

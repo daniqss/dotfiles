@@ -46,8 +46,9 @@ zle-line-init() {
 
 zle -N zle-line-init
 
-export PATH="$HOME/.cargo/bin/:$HOME/.config/scripts:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
+export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk/
 
 bindkey "^[[3~" delete-char
 bindkey "^[[1;5C" forward-word
@@ -80,6 +81,9 @@ code() {
 }
 intellij() {
 	/opt/intellij-idea-ultimate-edition/bin/idea.sh "$@" > /dev/null 2>&1 & disown
+}
+android-studio() {
+	/opt/android-studio/bin/studio "$@" > /dev/null 2>&1 & disown
 }
 alias lsi='TERM=xterm-256color ssh lsi@10.11.48.180'
 alias mysql='mariadb'

@@ -10,7 +10,7 @@ case $workspace_id in
     3) alacritty & disown ;;
     4) obsidian --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland & disown ;;
     5) nautilus & disown ;;
-    6) vesktop & disown ;;
+    6) vesktop  --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland & disown ;;
     7) steam & disown ;;
     8) spotify-launcher & disown ;;
     9) google-chrome-stable & disown ;;

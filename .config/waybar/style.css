@@ -1,5 +1,5 @@
 @import "mocha.css";
-@define-color base #1A191C;
+@define-color base #0c0c0c;
 @define-color text #F5E0DC;
 
 
@@ -13,7 +13,6 @@ window#waybar {
   background-color: @base;
   margin: 6px;
   padding: 0 4px;
-  border-radius: 5px;
 }
 
 window#waybar.hidden {
