@@ -14,6 +14,10 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+if [[ "$(tty)" == "/dev/tty1" && -z "$(pidof Hyprland)" ]]; then
+	exec Hyprland
+fi
+
 # transcient prompt
 zle-line-init() {
    emulate -L zsh
@@ -85,22 +89,23 @@ intellij() {
 android-studio() {
 	/opt/android-studio/bin/studio "$@" > /dev/null 2>&1 & disown
 }
-alias lsi='TERM=xterm-256color ssh lsi@10.11.48.180'
+alias lsi='TERM=xterm-256color ssh -i ~/.ssh/lsi_maquina lsi@10.11.48.180'
 alias mysql='mariadb'
 alias mysqladmin='mariadb-admin'
 
 alias pSyu='sudo pacman -Syu'
 alias pS='sudo pacman -S'
-alias pR='sudo pacman -R'
+alias pR='sudo pacman -Rs'
 alias ySyu='yay -Syu'
 alias yS='yay -S'
-alias yR='yay -R'
+alias yR='yay -Rs'
 
 alias gits='git status'
 alias gita='git add'
 alias gitc='git commit -m'
 alias gitca='git commit -am'
 alias gitkey='cat $HOME/Dropbox/keys/github_key.md | wl-copy'
+alias gitgraph="git log --graph --decorate --all --pretty=format:'%C(auto)%h%d %C(#888888)(%an; %ar)%Creset %s'"
 
 # alias dotfiles='/usr/bin/git --git-dir=$HOME/git-bare/dotfiles/ --work-tree=$HOME/.config'
 # alias FIC='/usr/bin/git --git-dir=$HOME/git-bare/FIC --work-tree=$HOME/Dropbox/Obsidian/FIC'
