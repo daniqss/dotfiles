@@ -1,6 +1,7 @@
 {
   // Theming
   "window.titleBarStyle": "custom",
+  "workbench.colorTheme": "Darker than One Dark Pro (Dark Editor)",
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Courier New', monospace",
   "editor.fontLigatures": true,
@@ -77,7 +78,6 @@
   "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
   "rust-analyzer.inlayHints.chainingHints.enable": false,
   "rust-analyzer.checkOnSave": true,
-  "workbench.colorTheme": "One Dark Darker",
   "redhat.telemetry.enabled": false,
 
   // Editor
