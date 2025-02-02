@@ -14,8 +14,11 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-if [[ "$(tty)" == "/dev/tty1" && -z "$(pidof Hyprland)" ]]; then
-	exec Hyprland
+# if uwsm check may-start && uwsm select; then
+# 	exec systemd-cat -t uwsm_start uwsm start default
+# fi
+if uwsm check may-start; then
+    exec uwsm start hyprland.desktop
 fi
 
 # transcient prompt
