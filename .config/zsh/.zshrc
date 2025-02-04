@@ -14,9 +14,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# if uwsm check may-start && uwsm select; then
-# 	exec systemd-cat -t uwsm_start uwsm start default
-# fi
 if uwsm check may-start; then
     exec uwsm start hyprland.desktop
 fi
@@ -107,7 +104,6 @@ alias gits='git status'
 alias gita='git add'
 alias gitc='git commit -m'
 alias gitca='git commit -am'
-alias gitkey='cat $HOME/Dropbox/keys/github_key.md | wl-copy'
 alias gitgraph="git log --graph --decorate --all --pretty=format:'%C(auto)%h%d %C(#888888)(%an; %ar)%Creset %s'"
 
 # alias dotfiles='/usr/bin/git --git-dir=$HOME/git-bare/dotfiles/ --work-tree=$HOME/.config'
