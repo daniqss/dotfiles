@@ -43,9 +43,15 @@ install_cargo_packages() {
 pacman_packages=(
     # Hyprland
     hyprland
+    hyprsunset
     xdg-desktop-portal-hyprland
     hyprpaper
     hyprcursor
+    hyprpicker
+    hyprlock
+    hypridle
+    hyprshot
+	swww
     
     # Terminal
     alacritty
@@ -78,54 +84,52 @@ pacman_packages=(
     wl-clipboard
     cliphist
     
-    # Apps
+    # Desktop shell
     rofi-wayland
     rofimoji
     rofi-bluetooth
     mako
-    waybar
-    wlogout
+    aylurs-gtk-shell
+
+    # Apps
+    chromium
+    google-chrome
     obsidian
     nautilus
     eog
     steam
     discord
     spotify-launcher
+    dropbox
+    gnome-disk-utility
+    polkit-gnome
+    gnome-keyring
+	gnome-calculator
+    rnote
     
     # Development
-    nodejs
-    npm
+    visual-studio-code-bin
+	thonny
+    octave
+    gtk4-demos
+    docker
+    docker-compose
     bun
     python
-    python-pip
-    python-pipx
     rust
 
     # miscelaneous
     brigthnessctl
     playerctl
     jq
+    udiskie
+    zip
 
-
-    #sddm theme
-    sddm
-    qt6-5compat
-    qt6-declarative
-    qt6-svg
-)
-
-# Define yay packages
-yay_packages=(
-    hyprpicker
-    hyprlock
-    hypridle
-    hyprshade
-	swww
-
-    # Apps
-    xpadneo-dkms
-
-    # Fonts
+    # libraries
+    openmpi
+	systemc
+    
+    # fonts
     ttf-bitstream-vera
     ttf-cascadia-code
     ttf-dejavu
@@ -140,11 +144,14 @@ yay_packages=(
     noto-fonts-emoji
     ttf-ubuntu-nerd
 
+    # themig
+    orchis-theme 
+)
+
+# Define yay packages
+yay_packages=(
     # themes
-    bibata-cursor-theme
-    orchis-theme-git
-    orchis-kde-theme-curve-git
-    tela-circle-icon-theme-all
+    bibata-cursor-git
 )
 
 cargo_packages=(
