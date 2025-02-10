@@ -1,74 +1,19 @@
 # dotfiles
-My [Hyprland](https://hyprland.org) rice!
+My [hyprland](https://hyprland.org) rice!
 
 
 ## screenshots
 ![screenshot](./assets/screenshot1.png)
-![screenshot](./assets/screenshot2.png)
-![screenshot](./assets/screenshot3.png)
 
-## programs that i use 
-
-| **program**          | **use**                     |
-| -------------------- | --------------------------- |
-| _Hyprland_           | Compositor                  |
-| _Hyprlock_           | Screen locker               |
-| _Waybar_             | Status bar                  |
-| _Rofi_               | Various menus               |
-| _Swww_               | Wallpaper Manager           |
-| _Mako_               | Notification daemon         |
-| _Wlogout_            | Application launcher        |
-| _Alacritty_          | Terminal emulator           |
-| _Zsh_                | Shell                       |
-| _Starship_           | Prompt                      |
-| _Fastfetch_          | Neofetch replacement        |
-| _Visual Studio Code_ | Text editor                 |
-| _Nautilus_           | File Explorer
-
-## themes
-
-| **Theme Name**                | **Theme**                             |
-| ----------------------------- | ------------------------------------- |
-| _Orchis-Purple-Dark-Compact_  | GTK Theme                             |
-| _Tela-circle-purple-dark_     | GTK Icon Theme                        |
-| _Bibata-Modern-Classic_       | Cursor Theme (Xcursor and HyprCursor) |
-| _Astronaut_                   | SDDM Theme                            |
-| _One Dark Darker_             | Visual Studio Theme                   |
-
-## fonts
-_maybe i forget some of them jiji_
-- Fira Code Nerd Font
-- JetBrains Mono Nerd Font
-- Caskaydia Cove Nerd Font
-- Noto Sans
 
 ## installation
-To install the dotfiles, you need to clone the repository and run the installation scripts.
-All the packages are listed in the [install_packages](./install/install_packages.sh). You can modify it to your needs.
-This script _may_ not work, i use it to list my packages 
-
-```bash
-git clone --depth 1 --branch main https://github.com/daniqss/dotfiles.git
-cd dotfiles
-./install/install_packages.sh
-./install/install_configs.sh
-```
-> [!WARNING]  
-> The script will remove all the config folders that may conflict with the dotfiles.
-> Make sure to backup your files before running the script.
-> Also, it's unupdated, jeje💀💀
-
-### sddm theme
-```bash
-sudo git clone https://github.com/keyitdev/sddm-astronaut-theme.git /usr/share/sddm/themes/sddm-astronaut-theme
-sudo cp /usr/share/sddm/themes/sddm-astronaut-theme/Fonts/* /usr/share/fonts/
-
-echo "[Theme]
-Current=sddm-astronaut-theme" | sudo tee /etc/sddm.conf
-```
+to set up this rice:
+1. install all the packages listed in [scripts/install_packages.sh](scripts/install_packages.sh)(i use the [chaotic aur](https://aur.chaotic.cx/))
+2. use [stow](https://www.gnu.org/software/stow/) to create symlinks in your `$HOME/.config`
+3. clone [Orchid theme](https://github.com/vinceliuice/Orchis-theme) and generate the theme using `./install.sh --tweaks black -c dark -t purple -l`
+4. clone my [custom desktop shell](https://github.com/daniqss/shell) and run `ags run -d shell`
 
 ## keybindings
-
 ### **movement**
 
 | **Bind**             | **Action**                     |
