@@ -69,6 +69,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.formatOnSave": true
+  },
 
   // rust analyzer hide hints
   "rust-analyzer.inlayHints.closingBraceHints.enable": false,

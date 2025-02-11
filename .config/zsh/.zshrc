@@ -48,6 +48,10 @@ zle-line-init() {
    return ret
  }
 
+precmd() {
+  print -Pn "\e]0;%n@%m:%~\a"
+}
+
 zle -N zle-line-init
 
 export PATH="/usr/local/mysql/bin:$PATH"
