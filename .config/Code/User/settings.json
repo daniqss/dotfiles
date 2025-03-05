@@ -14,7 +14,9 @@
     "markdown": true,
     "scminput": false,
     "typescript": true,
-    "rust": true
+    "rust": true,
+    "sql": false,
+    "cpp": true
   },
 
   "[javascript]": {
@@ -108,5 +110,6 @@
     "org.mockito.ArgumentMatchers.*",
     "org.mockito.Answers.*"
   ],
-  "workbench.colorTheme": "One Dark Darker"
+  "workbench.colorTheme": "One Dark Darker",
+  "zig.zls.enabled": "on"
 }
