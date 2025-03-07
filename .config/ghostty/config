@@ -1,0 +1,62 @@
+# Font
+font-family = CaskaydiaCove Nerd Font
+font-size = 14
+font-thicken = true
+bold-is-bright = false
+adjust-box-thickness = 1
+
+# Theme
+background-opacity = 0.95
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+
+# Window
+window-padding-x = 8
+window-padding-y = 5
+window-padding-balance = true
+window-padding-color = background
+window-inherit-working-directory = true
+window-inherit-font-size = true
+window-decoration = false
+resize-overlay = never
+confirm-close-surface = false
+mouse-hide-while-typing = true
+
+# GTK
+gtk-titlebar = false
+gtk-single-instance = true
+gtk-tabs-location = bottom
+gtk-wide-tabs = false
+
+# Behavior
+copy-on-select = false
+auto-update = off
+
+# Keybindings
+# keybind = ctrl+d=new_split:right
+# keybind = ctrl+f=new_split:down
+
+background = #0A0A0A
+foreground = #bdb9ae
+cursor-color = #bdb9ae
+selection-background = #15171c
+selection-foreground = #eeece7
+
+palette = 0=#15171c   
+palette = 1=#ec5f67   
+palette = 2=#80a763   
+palette = 3=#fdc253   
+palette = 4=#5485c0   
+palette = 5=#bf83c0   
+palette = 6=#57c2c0   
+palette = 7=#eeece7   
+palette = 8=#545454   
+palette = 9=#ff6973   
+palette = 10=#93d393  
+palette = 11=#ffd156
+palette = 12=#4d83d0  
+palette = 13=#ff55ff  
+palette = 14=#83e8e4  
+palette = 15=#ffffff  
