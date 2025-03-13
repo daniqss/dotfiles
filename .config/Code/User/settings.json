@@ -15,7 +15,7 @@
     "scminput": false,
     "typescript": true,
     "rust": true,
-    "sql": false,
+    "sql": true,
     "cpp": true
   },
 
@@ -75,6 +75,10 @@
     "editor.defaultFormatter": "xaver.clang-format",
     "editor.formatOnSave": true
   },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.formatOnSave": true
+  },
 
   // rust analyzer hide hints
   "rust-analyzer.inlayHints.closingBraceHints.enable": false,
@@ -111,5 +115,7 @@
     "org.mockito.Answers.*"
   ],
   "workbench.colorTheme": "One Dark Darker",
-  "zig.zls.enabled": "on"
+  "zig.zls.enabled": "on",
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "github.copilot.selectedCompletionModel": "gpt-4o-copilot"
 }

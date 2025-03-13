@@ -24,6 +24,8 @@ resize-overlay = never
 confirm-close-surface = false
 mouse-hide-while-typing = true
 
+clipboard-paste-protection = false
+
 # GTK
 gtk-titlebar = false
 gtk-single-instance = true
