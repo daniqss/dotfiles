@@ -15,8 +15,8 @@
     "scminput": false,
     "typescript": true,
     "rust": true,
-    "sql": true,
-    "cpp": true
+    "cpp": true,
+    "sql": false
   },
 
   "[javascript]": {
@@ -94,7 +94,9 @@
   "explorer.confirmDragAndDrop": false,
   "workbench.editorAssociations": {
     "*.copilotmd": "vscode.markdown.preview.editor",
-    "*.jpeg": "imagePreview.previewEditor"
+    "*.jpeg": "imagePreview.previewEditor",
+    "*.odp": "default",
+    "*.wav": "default"
   },
   "git.autofetch": true,
   "makefile.configureOnOpen": true,
